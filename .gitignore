@@ -1,24 +1,94 @@
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+*.gz
+*.out
+*.pid
+*.seed
+*.state
 
-node_modules
-dist
-dist-ssr
+# Dependency directories
+node_modules/
+jspm_packages/
+.bower_components/
+.pnp/
+.pnp.js
+
+# Build output
+dist/
+dist-ssr/
+.out/
+.next/
+.nuxt/
+build/
+.cache/
+temp/
+
+# Local environment files
 *.local
+.env
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.envrc
+*.envrc
+*.ini
+*.config.js
+*.config.cjs
+*.config.ts
+*.config.json
+*.config.yml
+*.config.yaml
 
 # Editor directories and files
-.vscode/*
+.vscode/
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Git & Deployment files
+.git/
+.gitignore
+.gitmodules
+.gitattributes
+.gitkeep
+.git-lfs/
+*.lock
+*.bak
+
+# Testing & Debugging
+coverage/
+.nyc_output/
+jest/
+jest-coverage/
+cypress/videos/
+cypress/screenshots/
+cypress/reports/
+
+# System dependencies & Misc
+*.iml
+*.swp
+*.swo
+*.kate-swp
+*.eslintrc
+*.eslintcache
+.editorconfig
+.prettierignore
+stylelint.config.js
