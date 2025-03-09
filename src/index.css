@@ -46,7 +46,11 @@ a {
 .nav__logo,
 .nav__burger,
 .nav__close {
-  color: #07364e;
+  color: #373f52;
+}
+
+.nav__logo h1 {
+  font-size: 1.5rem;
 }
 
 .nav__logo img {
@@ -58,11 +62,17 @@ a {
   .nav__logo img {
     width: 90px;
   }
+  .nav__logo h1 {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 768px) {
   .nav__logo img {
     width: 95px;
+  }
+  .nav__logo h1 {
+    font-size: 1.1rem;
   }
 }
 
@@ -182,7 +192,7 @@ a {
 }
 
 .nav__link {
-  color: #07364e;
+  color: #373f52;
   font-weight: 600;
   padding: 1.25rem 1.5rem;
   display: flex;

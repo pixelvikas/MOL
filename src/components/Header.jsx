@@ -28,7 +28,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav container">
         <div className="nav__data">
-          <a href="#" className="nav__logo">
+          <a href="/" className="nav__logo">
             <img src={MOLlogo} alt="" />
             <h1>MY OCEAN LOGISTICS</h1>
           </a>
@@ -62,7 +62,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/blogs" className="nav__link">
+              <Link to="/team" className="nav__link">
                 OUR TEAM
               </Link>
             </li>

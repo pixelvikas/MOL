@@ -1,64 +1,63 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import LoadingPage from "./components/LoadingPage"; // Ensure the correct import path
-
+import LoadingPage from "./components/LoadingPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ScrollToTopButton from "./components/ScrollToTopButton"; // New component for the scroll-to-top button
+import ScrollToTopButton from "./components/ScrollToTopButton";
+import Error from "./pages/Error/Page"; // Ensure Error component exists
 
 import Home from "./pages/Home/Page";
+import About from "./pages/About/Page";
+import Services from "./pages/Services/Page";
+import SingleService from "./pages/SingleService/Page";
+import Team from "./pages/Team/Page";
+import Contact from "./pages/Contact/Page";
 
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [pathname]);
 
   return null;
 };
 
-// Auto-scroll logic (if needed)
-const AutoScroll = () => {
-  // Add your auto-scroll logic here if required
-  return null;
-};
-
-// The component wrapped inside <BrowserRouter>
+// The main application component
 const MainApp = ({ loading, setLoading, progress, setProgress }) => {
   const location = useLocation();
 
   useEffect(() => {
-    // Trigger loading on route change
     setLoading(true);
-    setProgress(30); // Start the loading bar
+    setProgress(30);
 
     const timer = setTimeout(() => {
       setLoading(false);
-      setProgress(100); // Complete the loading bar
-    }, 2000); // Simulate loading for 2 seconds
+      setProgress(100);
+    }, 1000); // Reduced loading time for better UX
 
-    return () => clearTimeout(timer); // Cleanup the timer on component unmount
-  }, [location, setLoading, setProgress]);
+    return () => clearTimeout(timer);
+  }, [location]);
 
-  if (loading) {
-    return <LoadingPage />;
-  }
+  if (loading) return <LoadingPage />;
 
   return (
-    <div>
+    <>
       <Header />
       <ScrollToTop />
-      <AutoScroll />
       <Routes>
         <Route path="/" element={<Home />} />
-
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/:serviceid" element={<SingleService />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<Error />} />
       </Routes>
       <Footer />
-      <ScrollToTopButton /> {/* Add the scroll-to-top button here */}
-    </div>
+      <ScrollToTopButton />
+    </>
   );
 };
 
@@ -68,7 +67,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <ScrollToTop /> {/* Ensure ScrollToTop is inside BrowserRouter */}
       <MainApp
         loading={loading}
         setLoading={setLoading}
