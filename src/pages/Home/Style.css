@@ -1,0 +1,233 @@
+/* 🔹 HERO SECTION */
+.homepage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/herobg.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Dark overlay for better contrast */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}
+
+.hero-content {
+  max-width: 600px;
+  color: white;
+  text-align: left;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+/* 🔹 FEATURE CARDS - Overlapping Hero Section */
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 5%;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: -150px; /* Pull the cards up */
+  z-index: 10;
+}
+
+/* Individual Feature Card */
+.feature-card {
+  background: white;
+  width: 350px; /* Slightly reduced width for better responsiveness */
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Number Circle */
+.feature-number {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  border: 3px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: black;
+  background: white;
+}
+
+/* Feature Title */
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #222;
+}
+
+/* Feature Description */
+.feature-description {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Underline Decoration */
+.feature-line {
+  width: 50px;
+  height: 3px;
+  background: #f1383b;
+  margin: 15px auto 0;
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .features-container {
+    margin-top: -90px; /* Adjust the overlap for tablets */
+  }
+  .feature-card {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -60px; /* Adjust for smaller screens */
+    gap: 20px;
+  }
+  .feature-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-container {
+    margin-top: -40px; /* Less overlap on mobile */
+  }
+  .feature-card {
+    width: 95%;
+  }
+  .feature-title {
+    font-size: 1.2rem;
+  }
+  .feature-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+}
+/* 🔹 ABOUT US SECTION */
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+/* 🔹 LEFT CONTENT */
+.about-content {
+  max-width: 500px;
+  flex: 1;
+}
+
+.about-subtitle {
+  color: #f1383b;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* 🔹 FEATURES */
+.about-features {
+  margin: 20px 0;
+}
+
+.about-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.about-icon {
+  color: #f1383b;
+  font-size: 2rem;
+}
+
+/* 🔹 BUTTONS */
+.about-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .about-us {
+    flex-direction: column;
+  }
+  .about-buttons {
+    justify-content: center;
+  }
+  .about-feature {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-us {
+    flex-direction: column-reverse;
+
+    padding: 1rem;
+  }
+
+  .about-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

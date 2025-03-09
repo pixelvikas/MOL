@@ -1,0 +1,79 @@
+/* 🔹 COMMON BUTTON STYLES */
+.btn-comp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+}
+
+/* 🔹 PRIMARY BUTTON */
+.primary-btn {
+  background: #f1383b;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #d62828;
+  transform: scale(1.05);
+}
+
+/* 🔹 SECONDARY BUTTON */
+.secondary-btn {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+}
+
+.secondary-btn:hover {
+  background: black;
+  color: white;
+}
+
+/* 🔹 UNDERLINE BUTTON */
+.underline-btn {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  color: black;
+}
+
+.underline-btn .underline {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #f1383b;
+  margin-top: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.underline-btn:hover .underline {
+  width: 100%;
+}
+
+/* 🔹 DISABLED BUTTON */
+.btn-comp:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 🔹 RESPONSIVE BUTTONS */
+@media (max-width: 768px) {
+  .btn-comp {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}

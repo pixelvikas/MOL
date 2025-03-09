@@ -20,7 +20,9 @@ ul {
 a {
   text-decoration: none;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1120px;
