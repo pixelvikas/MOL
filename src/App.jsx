@@ -1,35 +1,82 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import LoadingPage from "./components/LoadingPage"; // Ensure the correct import path
 
-function App() {
-  const [count, setCount] = useState(0)
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/ScrollToTopButton"; // New component for the scroll-to-top button
+
+import Home from "./pages/Home/Page";
+
+// Scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
+// Auto-scroll logic (if needed)
+const AutoScroll = () => {
+  // Add your auto-scroll logic here if required
+  return null;
+};
+
+// The component wrapped inside <BrowserRouter>
+const MainApp = ({ loading, setLoading, progress, setProgress }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Trigger loading on route change
+    setLoading(true);
+    setProgress(30); // Start the loading bar
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+      setProgress(100); // Complete the loading bar
+    }, 2000); // Simulate loading for 2 seconds
+
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, [location, setLoading, setProgress]);
+
+  if (loading) {
+    return <LoadingPage />;
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <Header />
+      <ScrollToTop />
+      <AutoScroll />
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/*" element={<Error />} />
+      </Routes>
+      <Footer />
+      <ScrollToTopButton /> {/* Add the scroll-to-top button here */}
+    </div>
+  );
+};
+
+function App() {
+  const [progress, setProgress] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  return (
+    <BrowserRouter>
+      <ScrollToTop /> {/* Ensure ScrollToTop is inside BrowserRouter */}
+      <MainApp
+        loading={loading}
+        setLoading={setLoading}
+        progress={progress}
+        setProgress={setProgress}
+      />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
