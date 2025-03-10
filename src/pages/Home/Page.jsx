@@ -1,10 +1,51 @@
 import React from "react";
 import aboutus from "../../assets/homepage-aboutus.png";
 import Button from "../../components/Button"; // Import button component
+import warehousing from "../../assets/warehousing.png";
 
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import { PiWarehouse } from "react-icons/pi";
+import { PiAirplane } from "react-icons/pi";
+import { GiCargoShip } from "react-icons/gi";
+import { PiTruckTrailer } from "react-icons/pi";
+
+import warehousingImg from "../../assets/warehousing.png";
+import airFreightImg from "../../assets/airfreight.png";
+import oceanFreightImg from "../../assets/oceanfreight.png";
+import roadFreightImg from "../../assets/roadfreight.png";
 
 import "./style.css";
+
+const servicesData = [
+  {
+    id: "01",
+    title: "Warehousing",
+    icon: <PiWarehouse />,
+    image: warehousingImg,
+    data: "It must be aligned within a firm to have the most efficient...",
+  },
+  {
+    id: "02",
+    title: "Air Freight",
+    icon: <PiAirplane />,
+    image: airFreightImg,
+    data: "It must be aligned within a firm to have the most efficient...",
+  },
+  {
+    id: "03",
+    title: "Ocean Freight",
+    icon: <GiCargoShip />,
+    image: oceanFreightImg,
+    data: "It must be aligned within a firm to have the most efficient...",
+  },
+  {
+    id: "04",
+    title: "Road Freight",
+    icon: <PiTruckTrailer />,
+    image: roadFreightImg,
+    data: "It must be aligned within a firm to have the most efficient...",
+  },
+];
 
 const Home = () => {
   return (
@@ -65,6 +106,34 @@ const Home = () => {
         <div className="about-image">
           <img src={aboutus} alt="About Us" loading="lazy" />
         </div>
+      </section>
+
+      <section className="services-section">
+        {servicesData.map((service) => (
+          <div key={service.id} className="services-card">
+            <img
+              src={service.image}
+              alt={service.title}
+              className="services-img"
+            />
+            <div className="services-overlay">
+              {/* Normal State Content */}
+              <div className="services-header">
+                <h1 className="services-number">{service.id}</h1>
+                <h2 className="services-title">{service.title}</h2>
+              </div>
+              <div className="services-icon">{service.icon}</div>
+
+              {/* Hover Content (Initially Hidden) */}
+              <div className="services-hover-content">
+                <p className="services-text">{service.data}</p>
+                <a href="#" className="services-link">
+                  READ MORE
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </section>
     </>
   );
