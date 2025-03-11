@@ -1,7 +1,6 @@
 import React from "react";
 import aboutus from "../../assets/homepage-aboutus.png";
 import Button from "../../components/Button"; // Import button component
-import warehousing from "../../assets/warehousing.png";
 
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { PiWarehouse } from "react-icons/pi";
@@ -13,6 +12,12 @@ import warehousingImg from "../../assets/warehousing.png";
 import airFreightImg from "../../assets/airfreight.png";
 import oceanFreightImg from "../../assets/oceanfreight.png";
 import roadFreightImg from "../../assets/roadfreight.png";
+
+import workprocessBg from "../../assets/workbg.png";
+import workprocess1 from "../../assets/work1.png";
+import workprocess2 from "../../assets/work2.png";
+import workprocess3 from "../../assets/work3.png";
+import workprocess4 from "../../assets/work4.png";
 
 import "./style.css";
 
@@ -44,6 +49,34 @@ const servicesData = [
     icon: <PiTruckTrailer />,
     image: roadFreightImg,
     data: "It must be aligned within a firm to have the most efficient...",
+  },
+];
+
+const steps = [
+  {
+    id: "01",
+    title: "Order Processing",
+    description: "The logistics process begins with the receipt of customer...",
+    image: workprocess1,
+  },
+  {
+    id: "02",
+    title: "Warehousing",
+    description:
+      "Goods that are ready for shipment are stored in warehouses or...",
+    image: workprocess2,
+  },
+  {
+    id: "03",
+    title: "Order Tracking",
+    description: "Real-time tracking systems are used to monitor the...",
+    image: workprocess3,
+  },
+  {
+    id: "04",
+    title: "Product Delivery",
+    description: "In the final stage of logistics services.",
+    image: workprocess4,
   },
 ];
 
@@ -134,6 +167,37 @@ const Home = () => {
             </div>
           </div>
         ))}
+      </section>
+
+      <section className="work-process">
+        {/* Section Title */}
+        <h3 className="work-process-subtitle">WORK PROCESS</h3>
+        <h1 className="work-process-title">Logistics Workflow</h1>
+
+        {/* Background Image */}
+        <div className="workflow-container">
+          <img
+            src={workprocessBg}
+            alt="Workflow Background"
+            className="workflow-bg"
+          />
+
+          {/* Steps */}
+          <div className="workflow-steps">
+            {steps.map((step, index) => (
+              <div className="workflow-step" key={index}>
+                <div className="workflow-step-number">{step.id}</div>
+                <img
+                  src={step.image}
+                  alt={step.title}
+                  className="workflow-step-image"
+                />
+                <h2 className="workflow-step-title">{step.title}</h2>
+                <p className="workflow-step-description">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
     </>
   );

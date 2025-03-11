@@ -392,3 +392,126 @@
     font-size: 0.9rem;
   }
 }
+/* 🔹 SECTION STYLES */
+.work-process {
+  text-align: center;
+  padding: 50px 5%;
+  background: #fff;
+}
+
+.work-process-subtitle {
+  color: #f1383b;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.work-process-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* 🔹 WORKFLOW CONTAINER */
+.workflow-container {
+  position: relative;
+  margin-top: 40px;
+}
+
+.workflow-bg {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 🔹 WORKFLOW STEPS */
+.workflow-steps {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+
+.workflow-step {
+  flex: 1;
+  max-width: 200px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 IMAGE CONTAINER */
+.workflow-step-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.workflow-step-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 🔹 STEP NUMBER (Positioned Top-Left on Image) */
+.workflow-step-number {
+  position: absolute;
+  top: 6px;
+  left: 14px;
+  background: #f1383b;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgba(255, 176, 185, 0.7);
+}
+
+/* 🔹 STEP DETAILS */
+.workflow-step-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+  margin-top: 10px;
+}
+
+.workflow-step-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .workflow-steps {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .workflow-step-number {
+    left: 60px;
+  }
+
+  .workflow-step {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .workflow-step-number {
+    left: 25%;
+  }
+  .workflow-bg {
+    display: none;
+  }
+}
