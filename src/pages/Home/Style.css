@@ -515,3 +515,121 @@
     display: none;
   }
 }
+
+/* 🔹 NUMBER SECTION */
+.number-section {
+  position: relative;
+  width: 100%;
+}
+
+
+.number-info {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.product-info {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 20px;
+  border-radius: 8px 8px 0px 0px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.product-info h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.product-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.call-info {
+  padding: 15px 20px;
+  color: #fff;
+  text-align: left;
+  border-radius: 8px 8px 0px 0px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11.5px);
+}
+
+.call-info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* 🔹 NUMBER SECTION BACKGROUND */
+.number-bg {
+  width: 100%;
+  height: 550px; /* Default height */
+  max-height: 900px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .number-bg {
+    height: 450px; /* Reduce height for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .number-bg {
+    height: 350px; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .number-bg {
+    height: 250px; /* Compact height for mobile */
+  }
+}
+
+
+/* 🔹 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .number-info {
+    flex-direction: row;
+    bottom: 0px;
+    left: 10px;
+    gap: 10px;
+  }
+
+  .product-info,
+  .call-info {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+  }
+
+  .product-info h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-info h1 {
+    font-size: 1.2rem;
+  }
+
+  .product-info p,
+  .call-info p {
+    font-size: 0.8rem;
+  }
+
+  .number-info {
+    left: 5px;
+    bottom: 0px;
+  }
+}

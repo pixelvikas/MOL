@@ -19,6 +19,10 @@ import workprocess2 from "../../assets/work2.png";
 import workprocess3 from "../../assets/work3.png";
 import workprocess4 from "../../assets/work4.png";
 
+import numberBg from "../../assets/numberbg.png";
+
+import testimonial1 from "../../assets/testimonial1.png";
+
 import "./style.css";
 
 const servicesData = [
@@ -199,6 +203,25 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <div className="number-section">
+        <img src={numberBg} alt="Background" className="number-bg" />
+
+        <div className="number-info">
+          <div className="product-info">
+            <h1>426</h1>
+            <p>
+              Products <br />
+              Transport
+            </p>
+          </div>
+          <div className="call-info">
+            <p>Toll Free call</p>
+            <p>+022-22334455</p>
+          </div>
+        </div>
+      </div>
+
     </>
   );
 };
