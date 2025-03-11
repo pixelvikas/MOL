@@ -1,4 +1,7 @@
 import React from "react";
+import { FaStarHalf } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+
 import aboutus from "../../assets/homepage-aboutus.png";
 import Button from "../../components/Button"; // Import button component
 
@@ -21,7 +24,13 @@ import workprocess4 from "../../assets/work4.png";
 
 import numberBg from "../../assets/numberbg.png";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import testimonial1 from "../../assets/testimonial1.png";
+import testimonial2 from "../../assets/testimonial1.png";
+import testimonial3 from "../../assets/testimonial1.png";
 
 import "./style.css";
 
@@ -84,6 +93,92 @@ const steps = [
   },
 ];
 
+const reviews = [
+  {
+    name: "Priya Sharma",
+    role: "Home Loan",
+    rating: 4.5,
+    review:
+      "I'm so glad I chose this consultancy for my home loan. They guided me through every step, making the process smooth and stress-free.",
+    image: testimonial1,
+  },
+  {
+    name: "Amit Verma",
+    role: "Business Loan",
+    rating: 5,
+    review:
+      "Exceptional service! The team provided me with the best financial advice and helped me secure my business loan effortlessly.",
+    image: testimonial1,
+  },
+  {
+    name: "Neha Gupta",
+    role: "Education Loan",
+    rating: 4,
+    review:
+      "The team was highly professional and made my education loan process hassle-free. Highly recommend their services!",
+    image: testimonial1,
+  },
+  {
+    name: "Priya Sharma",
+    role: "Home Loan",
+    rating: 4.5,
+    review:
+      "I'm so glad I chose this consultancy for my home loan. They guided me through every step, making the process smooth and stress-free.",
+    image: testimonial1,
+  },
+  {
+    name: "Amit Verma",
+    role: "Business Loan",
+    rating: 5,
+    review:
+      "Exceptional service! The team provided me with the best financial advice and helped me secure my business loan effortlessly.",
+    image: testimonial1,
+  },
+  {
+    name: "Neha Gupta",
+    role: "Education Loan",
+    rating: 4,
+    review:
+      "The team was highly professional and made my education loan process hassle-free. Highly recommend their services!",
+    image: testimonial1,
+  },
+];
+const ReviewCard = ({ name, role, review, image }) => {
+  return (
+    <div className="testimonial-content">
+      <img src={image} alt={name} className="testimonial-image" />
+      <div className="testimonial-text">
+        <p className="testimonial-quote">"{review}"</p>
+        <h1 className="testimonial-name">{name}</h1>
+        <h2 className="testimonial-designation">{role}</h2>
+      </div>
+    </div>
+  );
+};
+const settings = {
+  infinite: true,
+  speed: 200,
+  slidesToShow: 1, // Show 1 slide at a time (matches reference image)
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 const Home = () => {
   return (
     <>
@@ -222,6 +317,37 @@ const Home = () => {
         </div>
       </div>
 
+      {/* <div className="reviews">
+        <div className="reviews-section">
+          <h1>
+            Client <span className="highlight">Reviews</span>
+          </h1>
+          <Slider {...settings} className="reviews-container">
+            {reviews.map((review, index) => (
+              <ReviewCard key={index} {...review} />
+            ))}
+          </Slider>
+        </div>
+      </div> */}
+
+      <div className="testimonial-section">
+        <div className="testimonial-container">
+          {/* Left Section */}
+          <div className="testimonial-header">
+            <h3 className="testimonial-subtitle">WHAT PEOPLE SAY</h3>
+            <h1 className="testimonial-title">
+              What our clients <br /> say about us
+            </h1>
+          </div>
+
+          {/* Right Section - Testimonial Slider */}
+          <Slider {...settings} className="testimonial-slider">
+            {reviews.map((review, index) => (
+              <ReviewCard key={index} {...review} />
+            ))}
+          </Slider>
+        </div>
+      </div>
     </>
   );
 };
