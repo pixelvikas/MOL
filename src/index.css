@@ -496,3 +496,81 @@ html {
     justify-content: center;
   }
 }
+
+/* 🔹 Hero Component */
+.hero-component-section {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  height: 381px;
+  background: url("./assets/heroCompBG.png") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 🔹 Overlay */
+.hero-component-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* 🔹 Title */
+.hero-component-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Breadcrumb */
+.hero-component-breadcrumb {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.hero-component-breadcrumb-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.hero-component-breadcrumb-link:hover {
+  color: #ff4d4d; /* Red hover effect */
+}
+
+.hero-component-breadcrumb-separator {
+  color: #ff4d4d;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.hero-component-breadcrumb-current {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .hero-component-hero-title {
+    font-size: 2rem;
+  }
+  .hero-component-breadcrumb {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-component-hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-component-breadcrumb {
+    font-size: 0.85rem;
+  }
+}

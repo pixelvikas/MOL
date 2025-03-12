@@ -1,7 +1,15 @@
-import React from "react";
+import HeroComponent from "./HeroComponent";
+import "./style.css";
 
 const About = () => {
-  return <div>About</div>;
+  return (
+    <HeroComponent
+      title="About Us"
+      link="/"
+      linkText="HOME"
+      current="ABOUT US"
+    />
+  );
 };
 
 export default About;
