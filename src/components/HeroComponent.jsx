@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 
 const HeroComponent = ({ title, link, linkText, current }) => {
   return (
