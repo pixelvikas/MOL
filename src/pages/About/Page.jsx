@@ -8,9 +8,34 @@ import aboutprofile from "../../assets/aboutprofile.png";
 
 import Button from "../../components/Button";
 
+import aboutuscontactbg from "../../assets/aboutuscontactbg.png";
+import history1 from "../../assets/history1.png";
+import history2 from "../../assets/history2.png";
+import history3 from "../../assets/history3.png";
+
 import "./style.css";
 
 const About = () => {
+  const historyData = [
+    {
+      year: "2023",
+      title: "We Have Expert Team",
+      text: "We've been using My Ocean Logistics for our international shipments, and they never disappoint.",
+      image: history1,
+    },
+    {
+      year: "2022",
+      title: "Expansion to New Markets",
+      text: "Our company expanded into Europe and Asia, making logistics smoother and faster for our clients.",
+      image: history2,
+    },
+    {
+      year: "2021",
+      title: "Innovative Logistics Solutions",
+      text: "We introduced AI-powered tracking systems to optimize efficiency and reduce delays.",
+      image: history3,
+    },
+  ];
   return (
     <>
       <HeroComponent
@@ -82,6 +107,49 @@ const About = () => {
             </p>
             <p className="about-page-ceo-signature">John R. Holland</p>
           </div>
+        </div>
+      </div>
+
+      <div className="about-section">
+        <img src={aboutuscontactbg} alt="" className="about-bg" />
+
+        <div className="about-content">
+          <h1>We are proud to deliver excellence & success</h1>
+          <p>
+            Our company has grown into a dynamic force in transportation across
+            the world. Equipped with state-of-the-art technologies, warehouse
+            services, carrier-partners, and dedicated employees.
+          </p>
+
+          <Button text="CONTACT US" className="primary-btn" />
+        </div>
+      </div>
+      <div className="history-section">
+        <div className="history-header">
+          <h1 className="history-main-title">HISTORY</h1>
+          <h2 className="history-subtitle">Our Company History</h2>
+        </div>
+        <div className="history-card-section">
+          {historyData.map((item, index) => (
+            <div
+              key={index}
+              className={`history-item history-mobile ${
+                index % 2 === 0 ? "history-item-odd" : "history-item-even"
+              }`}
+            >
+              <h1 className="history-year">{item.year}</h1>
+              <h3 className="history-title">{item.title}</h3>
+              <p className="history-text">{item.text}</p>
+              <div className="timeline">
+                <div className="timeline-dot"></div>
+              </div>
+              <img
+                src={item.image}
+                alt={item.title}
+                className="history-image"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </>

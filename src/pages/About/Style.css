@@ -217,3 +217,319 @@
     padding: 1.5rem;
   }
 }
+
+/* 🔹 SECTION CONTAINER */
+.about-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10%;
+  color: #fff;
+}
+
+/* 🔹 BACKGROUND IMAGE */
+.about-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* 🔹 CONTENT CONTAINER */
+.about-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+/* 🔹 HEADINGS */
+.about-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+/* 🔹 TEXT */
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 550px;
+  margin-bottom: 20px;
+}
+
+/* 🔹 BUTTON */
+.primary-btn {
+  background: #e63946;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #c92c3a;
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .about-content {
+    max-width: 90%;
+  }
+
+  .about-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 3%;
+  }
+
+  .about-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .primary-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* 🔹 SECTION CONTAINER */
+.history-section {
+  width: 100%;
+  padding: 80px 10%;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+/* 🔹 HEADER */
+.history-header {
+  margin-bottom: 50px;
+}
+
+.history-main-title {
+  color: #e63946;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.history-subtitle {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+  text-transform: uppercase;
+}
+
+/* 🔹 CARD CONTAINER */
+.history-card-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+/* 🔹 Default (Desktop View) */
+.history-item {
+  display: flex;
+  max-width: 650px;
+  width: 100%;
+  position: relative;
+  margin: 1rem 0;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.history-item:hover {
+  transform: scale(1.03);
+}
+
+/* 🔹 Odd & Even Layout */
+.history-item-odd {
+  flex-direction: column;
+}
+
+.history-item-even {
+  flex-direction: column-reverse;
+}
+
+/* 🔹 Force ALL to be Odd on Mobile */
+@media (max-width: 768px) {
+  .history-mobile {
+    flex-direction: column !important;
+  }
+}
+/* 🔹 YEAR */
+.history-year {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+/* 🔹 TITLE */
+.history-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* 🔹 TEXT */
+.history-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* 🔹 TIMELINE LINE & DOT */
+.timeline {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: #e63946;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0px 0px 8px rgba(230, 57, 70, 0.7);
+}
+
+.timeline-dot::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  background: #e63946;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.history-item-odd .timeline-dot::before {
+  top: 100%;
+}
+
+.history-item-even .timeline-dot::before {
+  top: -230%;
+}
+
+/* 🔹 IMAGE */
+.history-image {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.history-image:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .history-section {
+    padding: 60px 6%;
+  }
+
+  .history-item-odd,
+  .history-item-even .timeline-dot::before {
+    top: 100%;
+  }
+
+  .history-card-section {
+    flex-direction: column;
+  }
+
+
+  .history-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .history-year {
+    font-size: 1.8rem;
+  }
+
+  .history-title {
+    font-size: 1.2rem;
+  }
+
+  .history-text {
+    font-size: 0.95rem;
+  }
+
+  .history-card-section {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-section {
+    padding: 50px 5%;
+  }
+
+  .history-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .history-year {
+    font-size: 1.6rem;
+  }
+
+  .history-title {
+    font-size: 1.1rem;
+  }
+
+  .history-text {
+    font-size: 0.9rem;
+  }
+
+  .history-item {
+    padding: 20px;
+  }
+
+  .history-image {
+    max-width: 100%;
+  }
+}

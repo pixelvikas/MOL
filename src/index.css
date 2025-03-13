@@ -394,8 +394,8 @@ html {
   justify-content: center;
   width: 40px;
   height: 40px;
-  color: #ffffff;
-  background-color: rgba(80, 34, 29, 0.5);
+  background-color: #ffffff;
+  color: #07364e;
   border-radius: 50%;
   transition: background-color 0.3s, transform 0.3s;
   font-size: 18px;
@@ -444,12 +444,12 @@ html {
 /* Footer Bottom Section */
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #07364e;
   padding: 15px 20px;
   font-size: 14px;
-  color: #f1383b;
+  color: #ffffff;
 }
 
 .footer-bottom p {
@@ -462,13 +462,13 @@ html {
 }
 
 .footer-bottom a {
-  color: #f1383b;
+  color: #ffff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-bottom a:hover {
-  color: #ffffff;
+  color: #f1383b;
 }
 
 /* Responsive Design */
@@ -542,11 +542,11 @@ html {
 }
 
 .hero-component-breadcrumb-link:hover {
-  color: #ff4d4d; /* Red hover effect */
+  color: #f1383b;
 }
 
 .hero-component-breadcrumb-separator {
-  color: #ff4d4d;
+  color: #f1383b;
   font-weight: bold;
   padding: 0 5px;
 }
