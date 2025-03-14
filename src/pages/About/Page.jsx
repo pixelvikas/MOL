@@ -13,6 +13,13 @@ import history1 from "../../assets/history1.png";
 import history2 from "../../assets/history2.png";
 import history3 from "../../assets/history3.png";
 
+import aboutusnobg from "../../assets/aboutusnobg.png";
+
+import aboutno1 from "../../assets/aboutno1.png";
+import aboutno2 from "../../assets/aboutno2.png";
+import aboutno3 from "../../assets/aboutno3.png";
+import aboutno4 from "../../assets/aboutno4.png";
+
 import "./style.css";
 
 const About = () => {
@@ -35,6 +42,13 @@ const About = () => {
       text: "We introduced AI-powered tracking systems to optimize efficiency and reduce delays.",
       image: history3,
     },
+  ];
+
+  const aboutData = [
+    { icon: aboutno1, value: "35", label: "+ Years of Experience" },
+    { icon: aboutno2, value: "528", label: "+ Cities served worldwide" },
+    { icon: aboutno3, value: "475", label: "+ Satisfied clients" },
+    { icon: aboutno4, value: "45", label: "+ Companies we help" },
   ];
   return (
     <>
@@ -150,6 +164,28 @@ const About = () => {
               />
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="aboutno-section">
+        <img src={aboutusnobg} alt="Background" className="aboutno-bg" />
+
+        <div className="aboutno-overlay">
+          <div className="aboutno-stats">
+            {aboutData.map((item, index) => (
+              <div key={index} className="aboutno-stat">
+                <div className="aboutno-icon-box">
+                  <img
+                    src={item.icon}
+                    alt={item.label}
+                    className="aboutno-icon"
+                  />
+                </div>
+                <h1>{item.value}</h1>
+                <p>{item.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

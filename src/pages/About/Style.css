@@ -482,7 +482,6 @@
     flex-direction: column;
   }
 
-
   .history-subtitle {
     font-size: 1.6rem;
   }
@@ -531,5 +530,147 @@
 
   .history-image {
     max-width: 100%;
+  }
+}
+/* 🔹 Section Container */
+.aboutno-section {
+  position: relative;
+  width: 100%;
+  min-height: 500px; /* Ensures visibility on smaller screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents overflow */
+}
+
+/* 🔹 Background Image (Optimized for responsiveness) */
+.aboutno-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures it covers the section properly */
+  z-index: -1; /* Pushes it to the background */
+}
+
+/* 🔹 Overlay for better readability */
+.aboutno-overlay {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 🔹 Stats Container */
+.aboutno-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* 🔹 Individual Stat Box */
+.aboutno-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.aboutno-stat:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 Icon Container */
+.aboutno-icon-box {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #e63946;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Icon */
+.aboutno-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* 🔹 Number */
+.aboutno-stat h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+/* 🔹 Label */
+.aboutno-stat p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
+  .aboutno-stats {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutno-overlay {
+    top: auto;
+    padding: 40px 20px;
+  }
+
+  .aboutno-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+  }
+
+  .aboutno-stat {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+  }
+
+  .aboutno-stat h1 {
+    font-size: 1.8rem;
+  }
+
+  .aboutno-stat p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutno-section {
+    min-height: 400px;
+  }
+
+  .aboutno-stat {
+    padding: 12px;
+  }
+
+  .aboutno-stat h1 {
+    font-size: 1.6rem;
+  }
+
+  .aboutno-stat p {
+    font-size: 0.85rem;
   }
 }
