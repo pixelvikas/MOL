@@ -20,6 +20,17 @@ import aboutno2 from "../../assets/aboutno2.png";
 import aboutno3 from "../../assets/aboutno3.png";
 import aboutno4 from "../../assets/aboutno4.png";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import testimonialbg1 from "../../assets/testimonialbg1.png";
+import testimonialbg2 from "../../assets/testimonialbg2.png";
+import testimonialbg3 from "../../assets/testimonialbg3.png";
+import testimonialbg4 from "../../assets/testimonialbg4.png";
+
+import testimonial1 from "../../assets/testimonial1.png";
+
 import "./style.css";
 
 const About = () => {
@@ -50,6 +61,77 @@ const About = () => {
     { icon: aboutno3, value: "475", label: "+ Satisfied clients" },
     { icon: aboutno4, value: "45", label: "+ Companies we help" },
   ];
+
+  const reviews = [
+    {
+      name: "Aditya Sharma",
+      role: "Chief Technology Officer",
+      review:
+        "We've been using My Ocean Logistics for our international shipments, and they never disappoint. Their team ensures on-time deliveries and smooth customs clearance. Highly recommended!",
+      image: testimonial1,
+    },
+    {
+      name: "Priya Verma",
+      role: "Operations Manager",
+      review:
+        "Exceptional service! The team at My Ocean Logistics is always available to assist and make shipping stress-free. Highly professional and efficient.",
+      image: testimonial1,
+    },
+    {
+      name: "Rahul Gupta",
+      role: "Logistics Head",
+      review:
+        "Reliable and on-time! I have been using My Ocean Logistics for years, and their commitment to excellence is commendable.",
+      image: testimonial1,
+    },
+  ];
+
+  // Review Card Component
+  const ReviewCard = ({ name, role, review, image }) => {
+    return (
+      <div className="about-testimonial-card">
+        <p className="about-testimonial-text">"{review}"</p>
+        <div className="about-testimonial-client">
+          <img
+            src={image}
+            alt={name}
+            className="about-testimonial-client-img"
+          />
+          <div className="about-testimonial-client-info">
+            <h3 className="about-testimonial-client-name">{name}</h3>
+            <p className="about-testimonial-client-position">{role}</p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+  // Slick Slider Settings
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false, // Hide arrows for cleaner look
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <HeroComponent
@@ -187,6 +269,44 @@ const About = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div className="about-testimonial-section">
+        {/* Title Section */}
+        <div className="about-testimonial-header">
+          <h1 className="about-testimonial-title">TESTIMONIALS</h1>
+          <h2 className="about-testimonial-subtitle">What people say?</h2>
+        </div>
+
+        {/* Floating Images */}
+        <div className="about-testimonial-floating-images">
+          <img
+            src={testimonialbg1}
+            alt="Client 1"
+            className="about-testimonial-float about-testimonial-float-top-left"
+          />
+          <img
+            src={testimonialbg2}
+            alt="Client 2"
+            className="about-testimonial-float about-testimonial-float-top-right"
+          />
+          <img
+            src={testimonialbg3}
+            alt="Client 3"
+            className="about-testimonial-float about-testimonial-float-bottom-left"
+          />
+          <img
+            src={testimonialbg4}
+            alt="Client 4"
+            className="about-testimonial-float about-testimonial-float-bottom-right"
+          />
+        </div>
+
+        {/* Slider */}
+        <Slider {...settings} className="about-testimonial-slider">
+          {reviews.map((review, index) => (
+            <ReviewCard key={index} {...review} />
+          ))}
+        </Slider>
       </div>
     </>
   );
