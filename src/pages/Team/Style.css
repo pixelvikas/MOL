@@ -1,0 +1,49 @@
+/* Team Section */
+.team-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Titles */
+.team-title {
+  color: #f1383b;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.team-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Team Container */
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Team Member Card */
+.team-member {
+  background-color: #fff;
+  padding-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member img {
+  width: 100%;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect - Scale Image Only */
+.team-member:hover img {
+  transform: scale(1.1);
+}

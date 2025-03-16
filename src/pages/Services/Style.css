@@ -173,7 +173,7 @@
 .servicepage-history-title {
   font-size: 14px;
   text-transform: uppercase;
-  color: #e63946;
+  color: #f1383b;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -227,7 +227,7 @@
 .servicepage-timeline-dot {
   width: 12px;
   height: 12px;
-  background-color: #e63946;
+  background-color: #f1383b;
   border-radius: 50%;
   margin: auto;
   position: absolute;

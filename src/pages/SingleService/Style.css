@@ -55,7 +55,7 @@
 
 /* Active Service Style */
 .singleservice-box ul li.active {
-  background-color: #e63946;
+  background-color: #f1383b;
   color: white;
   font-weight: bold;
 }
@@ -70,7 +70,7 @@
 
 /* Hover Effects */
 .singleservice-box ul li:hover {
-  background-color: #e63946;
+  background-color: #f1383b;
 }
 
 .singleservice-box ul li:hover .service-link {
@@ -128,7 +128,7 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .singleservice-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
