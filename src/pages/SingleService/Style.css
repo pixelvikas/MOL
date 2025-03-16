@@ -1,0 +1,212 @@
+/* Main Service Container */
+.singleservice-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Sidebar */
+.singleservice-sidebar {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Sidebar Box */
+.singleservice-box {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.singleservice-box h3 {
+  background-color: #002244;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Sidebar List */
+.singleservice-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.singleservice-box ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Remove border from last item */
+.singleservice-box ul li:last-child {
+  border-bottom: none;
+}
+
+/* Active Service Style */
+.singleservice-box ul li.active {
+  background-color: #e63946;
+  color: white;
+  font-weight: bold;
+}
+
+.singleservice-box ul li.active .service-link {
+  color: white;
+}
+
+.singleservice-box ul li.active .service-arrow {
+  color: white;
+}
+
+/* Hover Effects */
+.singleservice-box ul li:hover {
+  background-color: #e63946;
+}
+
+.singleservice-box ul li:hover .service-link {
+  color: white;
+}
+
+.singleservice-box ul li:hover .service-arrow {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Service Links */
+.service-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.service-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Content Section */
+.singleservice-content {
+  flex: 1;
+}
+
+/* Image Styling */
+.singleservice-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Heading & Paragraph */
+.singleservice-content h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.singleservice-content p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .singleservice-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .singleservice-sidebar {
+    width: 100%;
+  }
+
+  .singleservice-box ul li {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .singleservice-content {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Main Container */
+.singleservice-faq-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Individual FAQ Item */
+.singleservice-faq-item {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* FAQ Question Section */
+.singleservice-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.singleservice-faq-question p {
+  margin: 0;
+}
+
+/* FAQ Arrow Icon */
+.singleservice-faq-icon {
+  color: #f1383b;
+  font-size: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.singleservice-faq-icon.open {
+  transform: rotate(180deg);
+}
+
+/* FAQ Answer Section with Smooth Animation */
+.singleservice-faq-answer {
+  padding: 0 20px;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out,
+    padding 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Keep the first answer open by default & make animation smoother */
+.singleservice-faq-item.open .singleservice-faq-answer {
+  max-height: 200px;
+  opacity: 1;
+  padding: 15px 20px;
+  transform: translateY(0);
+}

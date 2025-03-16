@@ -558,7 +558,7 @@ html {
 
 /* 🔹 Responsive Design */
 @media (max-width: 768px) {
-  .hero-component-hero-title {
+  .hero-component-title {
     font-size: 2rem;
   }
   .hero-component-breadcrumb {
@@ -567,7 +567,7 @@ html {
 }
 
 @media (max-width: 480px) {
-  .hero-component-hero-title {
+  .hero-component-title {
     font-size: 1.8rem;
   }
   .hero-component-breadcrumb {

@@ -1,0 +1,58 @@
+{
+    "services": [
+        {
+            "serviceid": "warehousing",
+            "title": "Warehousing",
+            "image": "../src/assets/singleservicebg1.png",
+            "description": [
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!"
+            ]
+        },
+        {
+            "serviceid": "air-freight",
+            "title": "Air Freight",
+            "image": "../src/assets/singleservicebg2.png",
+            "description": [
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!"
+            ]
+        },
+        {
+            "serviceid": "ocean-freight",
+            "title": "Ocean Freight",
+            "image": "../src/assets/singleservicebg3.png",
+            "description": [
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!"
+            ]
+        },
+        {
+            "serviceid": "road-freight",
+            "title": "Road Freight",
+            "image": "../src/assets/singleservicebg4.png",
+            "description": [
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quam beatae aut maiores numquam optio, repudiandae sint accusantium! Ratione, ipsum.",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam fugiat quia exercitationem perferendis quae optio velit temporibus reiciendis cumque."
+            ]
+        },
+        {
+            "serviceid": "rail-freight",
+            "title": "Rail Freight",
+            "image": "../src/assets/singleservicebg5.png",
+            "description": [
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quam beatae aut maiores numquam optio, repudiandae sint accusantium! Ratione, ipsum.",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam fugiat quia exercitationem perferendis quae optio velit temporibus reiciendis cumque."
+            ]
+        },
+        {
+            "serviceid": "logistics-solutions",
+            "title": "Logistics Solutions",
+            "image": "../src/assets/singleservicebg6.png",
+            "description": [
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quam beatae aut maiores numquam optio, repudiandae sint accusantium! Ratione, ipsum.",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam fugiat quia exercitationem perferendis quae optio velit temporibus reiciendis cumque."
+            ]
+        }
+    ]
+}
