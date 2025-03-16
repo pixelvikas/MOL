@@ -13,7 +13,7 @@
 }
 
 .about-page-subtitle {
-  color: #e63946;
+  color: #f1383b;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -50,7 +50,7 @@
 
 .about-page-icon {
   font-size: 2rem;
-  color: #e63946;
+  color: #f1383b;
 }
 
 .about-page-service-title {
@@ -63,23 +63,6 @@
   font-size: 1rem;
   color: #666;
   line-height: 1.5;
-}
-
-/* 🔹 Button */
-.about-page-button {
-  background: #e63946;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.about-page-button:hover {
-  background: #c62828;
 }
 
 /* 🔹 Right Image Section */
@@ -99,7 +82,7 @@
   position: absolute;
   right: -10%;
   bottom: 5%;
-  background: #e63946;
+  background: #f1383b;
   color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -180,11 +163,6 @@
     font-size: 0.95rem;
   }
 
-  .about-page-button {
-    font-size: 0.9rem;
-    padding: 10px 16px;
-  }
-
   .about-page-ceo-card {
     width: 80%;
   }
@@ -205,11 +183,6 @@
 
   .about-page-service-text {
     font-size: 0.85rem;
-  }
-
-  .about-page-button {
-    font-size: 0.85rem;
-    padding: 8px 14px;
   }
 
   .about-page-ceo-card {
@@ -263,22 +236,6 @@
   margin-bottom: 20px;
 }
 
-/* 🔹 BUTTON */
-.primary-btn {
-  background: #e63946;
-  color: #fff;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.primary-btn:hover {
-  background: #c92c3a;
-}
-
 /* 🔹 RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
   .about-content {
@@ -301,11 +258,6 @@
 
   .about-content p {
     font-size: 1rem;
-  }
-
-  .primary-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
   }
 }
 
@@ -333,7 +285,7 @@
 }
 
 .history-main-title {
-  color: #e63946;
+  color: #f1383b;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -393,7 +345,7 @@
 .history-year {
   font-size: 2rem;
   font-weight: bold;
-  color: #e63946;
+  color: #f1383b;
   margin-bottom: 10px;
 }
 
@@ -427,7 +379,7 @@
 .timeline-dot {
   width: 14px;
   height: 14px;
-  background: #e63946;
+  background: #f1383b;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -440,7 +392,7 @@
   position: absolute;
   width: 3px;
   height: 40px;
-  background: #e63946;
+  background: #f1383b;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -596,7 +548,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background: #e63946;
+  background: #f1383b;
   margin-bottom: 10px;
 }
 
@@ -690,7 +642,7 @@
 }
 
 .about-testimonial-title {
-  color: #e63946;
+  color: #f1383b;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -852,7 +804,7 @@
 .about-client-title {
   font-size: 1rem;
   text-transform: uppercase;
-  color: #e63946;
+  color: #f1383b;
   font-weight: bold;
   margin-bottom: 5px;
 }

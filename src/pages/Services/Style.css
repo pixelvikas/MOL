@@ -1,0 +1,283 @@
+/* 🔹 Services Section */
+.servicepage-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* 🔹 Title Styling */
+.servicepage-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #f1383b;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.servicepage-subtitle {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* 🔹 Services Grid (3x3 Layout) */
+.servicepage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+/* 🔹 Service Card */
+.servicepage-card {
+  max-width: 500px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* 🔹 Image Container */
+.servicepage-image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* 🔹 Service Image */
+.servicepage-image {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 Hover Effect (Image Zoom) */
+.servicepage-card:hover .servicepage-image {
+  transform: scale(1.05);
+}
+
+/* 🔹 Overlay (Arrow appears in the center) */
+.servicepage-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 65, 94, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* 🔹 Show Overlay on Hover */
+.servicepage-card:hover .servicepage-overlay {
+  opacity: 1;
+}
+
+/* 🔹 Arrow Icon */
+.servicepage-arrow {
+  color: white;
+  font-size: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 Arrow Hover Effect */
+.servicepage-card:hover .servicepage-arrow {
+  transform: scale(1.2);
+}
+
+/* 🔹 Service Title Section */
+.servicepage-title-container {
+  margin-top: 10px;
+}
+
+/* 🔹 Service Title */
+.servicepage-service-title {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 2px solid #f1383b;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 1024px) {
+  .servicepage-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 layout for tablets */
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicepage-grid {
+    grid-template-columns: repeat(1, 1fr); /* Full-width for mobile */
+    gap: 20px;
+  }
+
+  .servicepage-card {
+    max-width: 100%;
+  }
+}
+
+/* 🔹 Contact Section */
+.servicepage-contact {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  background: url("../../assets/aboutusnobg.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 🔹 Dark Overlay */
+.servicepage-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust darkness */
+}
+
+/* 🔹 Content Styling */
+.servicepage-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  max-width: 80%;
+}
+
+.servicepage-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .servicepage-content h1 {
+    font-size: 1.5rem;
+  }
+}
+/* 🔹 History Section */
+.servicepage-history {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.servicepage-history-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #e63946;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.servicepage-history-subtitle {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* 🔹 Timeline Container */
+.servicepage-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.servicepage-timeline::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+/* 🔹 Individual Step */
+.servicepage-timeline-step {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+/* 🔹 Step Title (Above Line) */
+.servicepage-step-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+  position: relative;
+  top: -20px;
+}
+
+/* 🔹 Timeline Dot (On the Line) */
+.servicepage-timeline-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #e63946;
+  border-radius: 50%;
+  margin: auto;
+  position: absolute;
+  top: 5px; /* Align exactly on the line */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 🔹 Step Number (Below Line) */
+.servicepage-step-number {
+  font-size: 60px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Step Description (Below Step Number) */
+.servicepage-step-description {
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 768px) {
+  .servicepage-timeline {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .servicepage-timeline::before {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+  }
+
+  .servicepage-timeline-step {
+    width: 100%;
+    position: relative;
+  }
+
+  .servicepage-timeline-dot {
+    top: 24%;
+    left: 50.4%;
+    transform: translate(-50%, -50%);
+  }
+
+  .servicepage-step-title {
+    top: 0;
+  }
+}

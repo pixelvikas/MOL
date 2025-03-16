@@ -1,11 +1,12 @@
 /* 🔹 COMMON BUTTON STYLES */
 .btn-comp {
+  font-family: "Outfit", sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 14px 28px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -17,8 +18,8 @@
 
 /* 🔹 PRIMARY BUTTON */
 .primary-btn {
-  background: #f1383b;
-  color: white;
+  background-color: #f1383b;
+  color: #ffffff;
 }
 
 .primary-btn:hover {
