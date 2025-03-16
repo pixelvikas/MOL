@@ -28,8 +28,14 @@ import testimonialbg1 from "../../assets/testimonialbg1.png";
 import testimonialbg2 from "../../assets/testimonialbg2.png";
 import testimonialbg3 from "../../assets/testimonialbg3.png";
 import testimonialbg4 from "../../assets/testimonialbg4.png";
-
 import testimonial1 from "../../assets/testimonial1.png";
+
+import client1 from "../../assets/client1.png";
+import client2 from "../../assets/client2.png";
+import client3 from "../../assets/client3.png";
+import client4 from "../../assets/client4.png";
+import client5 from "../../assets/client5.png";
+import client6 from "../../assets/client6.png";
 
 import "./style.css";
 
@@ -131,6 +137,8 @@ const About = () => {
       },
     ],
   };
+
+  const clients = [client1, client2, client3, client4, client5, client6];
 
   return (
     <>
@@ -307,6 +315,25 @@ const About = () => {
             <ReviewCard key={index} {...review} />
           ))}
         </Slider>
+      </div>
+      <div className="about-client-section">
+        {/* Title Section */}
+        <div className="about-client-header">
+          <h1 className="about-client-title">CLIENTS</h1>
+          <h2 className="about-client-subtitle">Our happy clients?</h2>
+        </div>
+
+        {/* Clients Logo Grid */}
+        <div className="about-client-logos">
+          {clients.map((client, index) => (
+            <img
+              key={index}
+              src={client}
+              alt={`Client ${index + 1}`}
+              className="about-client-logo"
+            />
+          ))}
+        </div>
       </div>
     </>
   );

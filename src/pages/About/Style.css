@@ -691,7 +691,7 @@
 
 .about-testimonial-title {
   color: #e63946;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -839,5 +839,63 @@
 
   .about-testimonial-float {
     display: none; /* Hide floating images for very small screens */
+  }
+}
+
+/* 🔹 Clients Section */
+.about-client-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* 🔹 Title Styling */
+.about-client-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #e63946;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.about-client-subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Client Logos Container */
+.about-client-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* 🔹 Individual Client Logo */
+.about-client-logo {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-client-logos {
+    gap: 25px;
+  }
+  .about-client-logo {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-client-logos {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .about-client-logo {
+    max-width: 100px;
   }
 }
