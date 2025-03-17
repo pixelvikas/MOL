@@ -12,6 +12,9 @@ body {
   font-size: 0.938rem;
   background-color: #ffffff;
 }
+::placeholder {
+  font-family: "Outfit", sans-serif;
+}
 
 ul {
   list-style: none;
