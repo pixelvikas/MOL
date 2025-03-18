@@ -1,6 +1,4 @@
 import React from "react";
-import { FaStarHalf } from "react-icons/fa";
-import { FaStar } from "react-icons/fa";
 
 import aboutus from "../../assets/homepage-aboutus.png";
 import Button from "../../components/Button"; // Import button component
@@ -29,8 +27,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import testimonial1 from "../../assets/testimonial1.png";
-import testimonial2 from "../../assets/testimonial1.png";
-import testimonial3 from "../../assets/testimonial1.png";
 
 import "./style.css";
 
