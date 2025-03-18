@@ -1,7 +1,6 @@
 import React from "react";
 import HeroComponent from "../../components/HeroComponent";
 import Button from "../../components/Button";
-import contactdetailbg from "../../assets/contactdetailbg.png";
 
 import { IoCallOutline } from "react-icons/io5";
 import { SlLocationPin } from "react-icons/sl";
