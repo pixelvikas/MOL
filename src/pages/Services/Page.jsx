@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 import HeroComponent from "../../components/HeroComponent";
 
 import service1 from "../../assets/warehousingservice.png";
@@ -11,7 +12,6 @@ import service6 from "../../assets/logisticssolutionservice.png";
 import { FaArrowRight } from "react-icons/fa6";
 
 import Button from "../../components/Button";
-import "./style.css";
 
 const services = [
   { img: service1, title: "Warehousing", link: "/services/warehousing" },

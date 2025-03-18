@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./style.css";
 import { Link, useParams } from "react-router-dom";
 import HeroComponent from "../../components/HeroComponent";
 import { IoIosArrowRoundForward, IoIosArrowDown } from "react-icons/io";
@@ -6,7 +7,6 @@ import { CiMail, CiLocationOn } from "react-icons/ci";
 import { MdOutlinePhone, MdOutlineFileDownload } from "react-icons/md";
 import { FaRegFilePdf } from "react-icons/fa6";
 import singleservicebg1 from "../../assets/singleservicebg1.png";
-import "./style.css";
 
 const SingleService = () => {
   const { serviceid } = useParams();

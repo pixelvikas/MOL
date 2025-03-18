@@ -1,11 +1,10 @@
 import React from "react";
+import "./style.css";
 import HeroComponent from "../../components/HeroComponent";
 import team1 from "../../assets/team1.png";
 import team2 from "../../assets/team2.png";
 import team3 from "../../assets/team3.png";
 import team4 from "../../assets/team4.png";
-
-import "./style.css";
 
 const Team = () => {
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 import HeroComponent from "../../components/HeroComponent";
 import Button from "../../components/Button";
 
@@ -11,8 +12,6 @@ import {
   FaXTwitter,
   FaEnvelope,
 } from "react-icons/fa6";
-
-import "./style.css";
 
 const Contact = () => {
   return (

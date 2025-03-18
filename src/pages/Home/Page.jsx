@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./style.css";
 import aboutus from "../../assets/homepage-aboutus.png";
 import Button from "../../components/Button"; // Import button component
 
@@ -28,7 +28,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import testimonial1 from "../../assets/testimonial1.png";
 
-import "./style.css";
+
 
 const servicesData = [
   {
