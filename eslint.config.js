@@ -60,5 +60,6 @@ export default [
         version: "detect",
       },
     },
+    "import/no-unresolved": ["error", { caseSensitive: true }],
   },
 ];
