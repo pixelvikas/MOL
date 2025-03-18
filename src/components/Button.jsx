@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Button.css"; // Import styles
+import "./button.css"; // Import styles
 
 const Button = ({
   text,
