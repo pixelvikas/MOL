@@ -1,5 +1,4 @@
 import React from "react";
-import "./loadingpage.css";
 import logo from "../assets/logo.png";
 
 const LoadingPage = () => {
