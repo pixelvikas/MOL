@@ -53,7 +53,7 @@ const MainApp = ({ loading, setLoading, progress, setProgress }) => {
         <Route path="/services/:serviceid" element={<SingleService />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/load" element={<LoadingPage />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
       <Footer />
       <ScrollToTopButton />
