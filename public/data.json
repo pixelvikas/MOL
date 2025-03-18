@@ -2,56 +2,56 @@
     "services": [
         {
             "serviceid": "warehousing",
-            "title": "Warehousing",
+            "title": "Warehousing Services",
             "image": "../singleservicebg1.png",
             "description": [
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!"
+                "Our professional warehousing services ensure the safe, secure, and efficient storage of goods in strategically located warehouses across key global regions. We understand that storage is a critical part of any supply chain, which is why we offer flexible short-term and long-term warehousing solutions tailored to your business needs.",
+                "Our warehousing logistics include climate-controlled storage facilities, real-time inventory management, barcoding, and quality control systems. We specialize in handling bulk goods, sensitive items, and high-value products with utmost care. Whether you are an e-commerce retailer, manufacturer, or distributor, our warehousing services are designed to streamline your operations, reduce overheads, and improve supply chain visibility."
             ]
         },
         {
             "serviceid": "air-freight",
-            "title": "Air Freight",
+            "title": "Air Freight Services",
             "image": "../singleservicebg2.png",
             "description": [
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!"
+                "Our fast, secure, and reliable air freight services provide global cargo transportation with time-sensitive delivery solutions. We partner with major airlines to ensure priority space allocation and competitive rates for international air shipments.",
+                "From express delivery of small parcels to heavy cargo transport, we manage door-to-door delivery, customs documentation, insurance, and real-time shipment tracking. Our expert team provides tailored air freight solutions for industries like electronics, pharmaceuticals, automotive parts, and perishables. Trust us for safe handling, quick transit times, and seamless coordination of your urgent freight needs worldwide."
             ]
         },
         {
             "serviceid": "ocean-freight",
-            "title": "Ocean Freight",
+            "title": "Ocean Freight Services",
             "image": "../singleservicebg3.png",
             "description": [
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti architecto unde deleniti soluta quae et sint illum blanditiis, necessitatibus ipsa assumenda doloribus possimus earum dolores magni aperiam non voluptate!"
+                "We specialize in reliable and cost-effective ocean freight services for international cargo shipping. Our ocean freight solutions cover both full container load (FCL) and less-than-container load (LCL) shipments, connecting major global ports with efficient and affordable shipping routes.",
+                "Our experienced team manages all aspects of sea freight logistics, including container booking, customs clearance, insurance, and shipment documentation. We serve industries like retail, heavy machinery, chemicals, and consumer goods, ensuring safe handling and timely delivery. With end-to-end visibility, competitive rates, and strong carrier relationships, we make your global shipping stress-free."
             ]
         },
         {
             "serviceid": "road-freight",
-            "title": "Road Freight",
+            "title": "Road Freight Services",
             "image": "../singleservicebg4.png",
             "description": [
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quam beatae aut maiores numquam optio, repudiandae sint accusantium! Ratione, ipsum.",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam fugiat quia exercitationem perferendis quae optio velit temporibus reiciendis cumque."
+                "Our comprehensive road freight services provide efficient, reliable domestic and cross-border cargo transportation solutions. We operate a vast fleet of trucks and trailers, offering flexibility for shipments of all sizes and types, including temperature-sensitive and hazardous materials.",
+                "Our road logistics services include freight consolidation, palletized shipping, express deliveries, and last-mile distribution. With GPS tracking and route optimization technology, we guarantee real-time tracking and timely delivery across major industrial and commercial hubs. Whether you require dedicated trucking or part-load shipments, we ensure secure and affordable road freight solutions tailored to your industry."
             ]
         },
         {
             "serviceid": "rail-freight",
-            "title": "Rail Freight",
+            "title": "Rail Freight Services",
             "image": "../singleservicebg5.png",
             "description": [
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quam beatae aut maiores numquam optio, repudiandae sint accusantium! Ratione, ipsum.",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam fugiat quia exercitationem perferendis quae optio velit temporibus reiciendis cumque."
+                "We provide efficient rail freight services designed for large-volume, long-distance cargo transportation. Rail logistics is an eco-friendly and cost-effective solution, offering predictable transit times and enhanced load capacity for bulk commodities and containerized goods.",
+                "Our extensive rail freight network supports industries such as mining, agriculture, automotive, and retail. We handle freight planning, intermodal transfers, documentation, and door-to-door delivery integration. With our sustainable rail solutions, businesses benefit from reduced transportation costs, minimized carbon footprint, and reliable freight delivery over vast distances."
             ]
         },
         {
             "serviceid": "logistics-solutions",
-            "title": "Logistics Solutions",
+            "title": "End-to-End Logistics Solutions",
             "image": "../singleservicebg6.png",
             "description": [
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quam beatae aut maiores numquam optio, repudiandae sint accusantium! Ratione, ipsum.",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam fugiat quia exercitationem perferendis quae optio velit temporibus reiciendis cumque."
+                "Our end-to-end logistics solutions are tailored to meet complex supply chain demands through integrated transport, warehousing, freight forwarding, and last-mile delivery. We combine multiple transportation modes — air, ocean, rail, and road — to deliver seamless multimodal logistics services for businesses worldwide.",
+                "We support diverse sectors like e-commerce, automotive, healthcare, and retail with custom logistics strategies, optimized route planning, advanced shipment tracking, and inventory management. Whether it’s B2B or B2C logistics, our scalable solutions improve efficiency, reduce operational costs, and ensure on-time deliveries, helping your business stay competitive in the global market."
             ]
         }
     ]

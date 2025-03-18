@@ -38,6 +38,8 @@ import client4 from "../../assets/client4.png";
 import client5 from "../../assets/client5.png";
 import client6 from "../../assets/client6.png";
 
+import { Helmet } from "react-helmet-async";
+
 const About = () => {
   const historyData = [
     {
@@ -141,6 +143,41 @@ const About = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          About Us | My Ocean Logistics - Global Freight & Logistics Experts
+        </title>
+        <meta
+          name="description"
+          content="Learn about My Ocean Logistics, a leader in global freight services including warehousing, air, ocean, road, and rail logistics. Discover our mission, values, and dedication to delivering efficient and reliable supply chain solutions worldwide."
+        />
+        <meta
+          name="keywords"
+          content="About My Ocean Logistics, logistics company, global freight, supply chain solutions, transportation services, warehousing, air freight, ocean freight, road freight, rail freight, logistics experts"
+        />
+        <meta
+          property="og:title"
+          content="About Us | My Ocean Logistics - Global Freight & Logistics Experts"
+        />
+        <meta
+          property="og:description"
+          content="Explore the mission, vision, and expertise of My Ocean Logistics. We deliver top-tier logistics and global freight services tailored to your business needs."
+        />
+        <meta property="og:image" content="/src/assets/mol.png" />
+        <meta property="og:url" content="https://mol-one.vercel.app/about" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About Us | My Ocean Logistics - Freight & Logistics Experts"
+        />
+        <meta
+          name="twitter:description"
+          content="Get to know My Ocean Logistics — trusted logistics partners for warehousing, shipping, and freight solutions worldwide."
+        />
+        <meta name="twitter:image" content="/src/assets/mol.png" />
+      </Helmet>
+
       <HeroComponent
         title="About Us"
         link="/"
@@ -148,135 +185,205 @@ const About = () => {
         current="ABOUT US"
       />
 
-      <div className="about-page-section">
+      <section
+        className="about-page-section"
+        aria-labelledby="about-page-title"
+      >
         {/* Left Section */}
         <div className="about-page-content">
           <h4 className="about-page-subtitle">ABOUT US</h4>
-          <h1 className="about-page-title">
-            We provide full range of transportation
+          <h1 id="about-page-title" className="about-page-title">
+            Reliable and Comprehensive Transportation Solutions
           </h1>
           <p className="about-page-description">
-            The efficiency and reliability of transport systems play a crucial
-            role in connecting communities.
+            At My Ocean Logistics, we specialize in connecting communities and
+            businesses through efficient, timely, and secure logistics and
+            transport services across the globe.
           </p>
+
           {/* Services */}
           <div className="about-page-services">
-            <div className="about-page-service">
-              <IoEarthOutline className="about-page-icon" />
+            <article className="about-page-service">
+              <IoEarthOutline className="about-page-icon" aria-hidden="true" />
               <div>
-                <h3 className="about-page-service-title">Worldwide Service</h3>
+                <h2 className="about-page-service-title">
+                  Worldwide Logistics Service
+                </h2>
                 <p className="about-page-service-text">
-                  We’re always provide people a complete solution focused of any
-                  business.
+                  We offer global transportation and freight solutions tailored
+                  for international businesses, ensuring safe and timely
+                  delivery across borders.
                 </p>
               </div>
-            </div>
+            </article>
 
-            <div className="about-page-service">
-              <PiTruckTrailer className="about-page-icon" />
+            <article className="about-page-service">
+              <PiTruckTrailer className="about-page-icon" aria-hidden="true" />
               <div>
-                <h3 className="about-page-service-title">Local Service</h3>
+                <h2 className="about-page-service-title">
+                  Local Freight and Transport Solutions
+                </h2>
                 <p className="about-page-service-text">
-                  We’re always provide people a complete solution focused of any
-                  business.
+                  Our local logistics services are designed to support regional
+                  businesses with reliable and cost-effective transport
+                  solutions.
                 </p>
               </div>
-            </div>
+            </article>
           </div>
+
           {/* Learn More Button */}
-          <Button text="LEARN MORE" className="primary-btn" link="/contact" />
+          <Button
+            text="CONTACT US"
+            className="primary-btn"
+            link="/contact"
+            aria-label="Learn more about our transportation and logistics services"
+          />
         </div>
 
         {/* Right Section */}
         <div className="about-page-image-container">
-          <img
-            src={about1}
-            alt="Worker handling boxes"
-            className="about-page-image"
-          />
+          <figure>
+            <img
+              src={about1}
+              alt="Logistics worker handling cargo boxes for global transport"
+              className="about-page-image"
+            />
+            <figcaption>
+              Efficient cargo handling by our dedicated logistics team.
+            </figcaption>
+          </figure>
 
           {/* CEO Card */}
-          <div className="about-page-ceo-card">
+          <article
+            className="about-page-ceo-card"
+            aria-labelledby="ceo-card-title"
+          >
             <img
               src={aboutprofile}
-              alt="CEO"
+              alt="John R. Holland, CEO of Global Transport Services"
               className="about-page-ceo-image"
             />
-            <h3 className="about-page-ceo-name">John R. Holland</h3>
-            <p className="about-page-ceo-title">CEO & Founder</p>
+            <h2 id="ceo-card-title" className="about-page-ceo-name">
+              John R. Holland
+            </h2>
+            <p className="about-page-ceo-title">
+              Founder & Chief Executive Officer
+            </p>
             <p className="about-page-ceo-description">
-              We pride ourselves on providing best transport services available
-              all over the world.
+              At My Ocean Logistics, we are committed to delivering top-tier
+              global transportation and logistics solutions. Our mission is to
+              ensure safe, timely, and cost-effective cargo services worldwide.
             </p>
             <p className="about-page-ceo-signature">John R. Holland</p>
-          </div>
+          </article>
         </div>
-      </div>
+      </section>
 
-      <div className="about-section">
-        <img src={aboutuscontactbg} alt="" className="about-bg" />
+      <div className="about-section" aria-labelledby="about-section-title">
+        <img
+          src={aboutuscontactbg}
+          alt="Global logistics and transportation background image"
+          className="about-bg"
+        />
 
         <div className="about-content">
-          <h1>We are proud to deliver excellence & success</h1>
+          <h1 id="about-section-title">
+            We are proud to deliver excellence in global transport & logistics
+            services
+          </h1>
           <p>
-            Our company has grown into a dynamic force in transportation across
-            the world. Equipped with state-of-the-art technologies, warehouse
-            services, carrier-partners, and dedicated employees.
+            At My Ocean Logistics, we have evolved into a trusted leader in
+            global transportation, logistics, and freight forwarding solutions.
+            Our success is built on cutting-edge technologies, secure
+            warehousing services, reliable carrier partnerships, and a team of
+            dedicated logistics professionals committed to timely delivery and
+            customer satisfaction.
           </p>
 
-          <Button text="CONTACT US" className="primary-btn" link="/contact" />
+          <Button
+            text="CONTACT US"
+            className="primary-btn"
+            link="/contact"
+            aria-label="Contact us for transportation and logistics services"
+          />
         </div>
       </div>
-      <div className="history-section">
+
+      <div className="history-section" aria-labelledby="company-history-title">
         <div className="history-header">
-          <h1 className="history-main-title">HISTORY</h1>
+          <h1 id="company-history-title" className="history-main-title">
+            History
+          </h1>
           <h2 className="history-subtitle">Our Company History</h2>
         </div>
+
         <div className="history-card-section">
           {historyData.map((item, index) => (
-            <div
+            <article
               key={index}
               className={`history-item history-mobile ${
                 index % 2 === 0 ? "history-item-odd" : "history-item-even"
               }`}
+              aria-labelledby={`history-title-${index}`}
             >
-              <h1 className="history-year">{item.year}</h1>
-              <h3 className="history-title">{item.title}</h3>
-              <p className="history-text">{item.text}</p>
+              <h3 className="history-year">{item.year}</h3>
+              <h4 id={`history-title-${index}`} className="history-title">
+                {item.title}
+              </h4>
+              <p className="history-text">
+                {item.text} Our logistics company continues to strive for
+                reliable freight shipping and innovative transport solutions.
+              </p>
               <div className="timeline">
-                <div className="timeline-dot"></div>
+                <div className="timeline-dot" aria-hidden="true"></div>
               </div>
               <img
                 src={item.image}
-                alt={item.title}
+                alt={`${item.title} - ${item.year}`}
                 className="history-image"
+                loading="lazy"
               />
-            </div>
+            </article>
           ))}
         </div>
       </div>
 
-      <div className="aboutno-section">
-        <img src={aboutusnobg} alt="Background" className="aboutno-bg" />
+      <section
+        className="aboutno-section"
+        aria-labelledby="company-achievements-heading"
+      >
+        <img
+          src={aboutusnobg}
+          alt="Global transportation services background"
+          className="aboutno-bg"
+          loading="lazy"
+        />
 
         <div className="aboutno-overlay">
           <div className="aboutno-stats">
             {aboutData.map((item, index) => (
-              <div key={index} className="aboutno-stat">
+              <article
+                key={index}
+                className="aboutno-stat"
+                aria-label={item.label}
+              >
                 <div className="aboutno-icon-box">
                   <img
                     src={item.icon}
-                    alt={item.label}
+                    alt={`${item.label} icon`}
                     className="aboutno-icon"
+                    loading="lazy"
                   />
                 </div>
                 <h1>{item.value}</h1>
                 <p>{item.label}</p>
-              </div>
+              </article>
             ))}
           </div>
         </div>
-      </div>
+      </section>
+
       <div className="about-testimonial-section">
         {/* Title Section */}
         <div className="about-testimonial-header">

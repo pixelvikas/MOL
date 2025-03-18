@@ -12,10 +12,46 @@ import {
   FaXTwitter,
   FaEnvelope,
 } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   return (
     <>
+      <Helmet>
+        <title>
+          Contact Us | My Ocean Logistics - Get in Touch for Freight & Logistics
+          Solutions
+        </title>
+        <meta
+          name="description"
+          content="Reach out to My Ocean Logistics for expert assistance with air, ocean, road, and rail freight services. Contact us for inquiries, custom quotes, or any logistics solutions tailored to your needs."
+        />
+        <meta
+          name="keywords"
+          content="Contact My Ocean Logistics, logistics company contact, freight service inquiries, global shipping assistance, warehousing support, air freight quotes, ocean freight solutions, road freight, rail logistics help"
+        />
+        <meta
+          property="og:title"
+          content="Contact Us | My Ocean Logistics - Freight & Logistics Experts"
+        />
+        <meta
+          property="og:description"
+          content="Have questions or need logistics solutions? Contact My Ocean Logistics today for quick support, expert advice, and customized freight services worldwide."
+        />
+        <meta property="og:image" content="/src/assets/mol.png" />
+        <meta property="og:url" content="https://mol-one.vercel.app/contact" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Contact Us | My Ocean Logistics - Freight & Logistics Experts"
+        />
+        <meta
+          name="twitter:description"
+          content="Get in touch with My Ocean Logistics for logistics solutions and freight services tailored to your business needs — fast, reliable, and global."
+        />
+        <meta name="twitter:image" content="/src/assets/mol.png" />
+      </Helmet>
       <HeroComponent
         title="Contact us"
         link="/"
@@ -26,7 +62,7 @@ const Contact = () => {
       <div className="contact-container">
         {/* Left Form Section */}
         <div className="contact-form-section">
-          <h1 className="contact-subtitle">01 _ CONTACT</h1>
+          <h1 className="contact-subtitle">CONTACT</h1>
           <h1 className="contact-title">Get in Touch</h1>
 
           <form className="contact-form">

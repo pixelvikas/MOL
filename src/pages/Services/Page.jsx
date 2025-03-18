@@ -12,6 +12,7 @@ import service6 from "../../assets/logisticssolutionservice.png";
 import { FaArrowRight } from "react-icons/fa6";
 
 import Button from "../../components/Button";
+import { Helmet } from "react-helmet-async";
 
 const services = [
   { img: service1, title: "Warehousing", link: "/services/warehousing" },
@@ -29,6 +30,39 @@ const services = [
 const Services = () => {
   return (
     <>
+      <Helmet>
+        <title>Logistics & Freight Services | My Ocean Logistics</title>
+        <meta
+          name="description"
+          content="Explore premium logistics and freight services with My Ocean Logistics. We specialize in Air Freight, Ocean Freight, Road Freight, Rail Freight, Warehousing, and tailored Logistics Solutions for businesses worldwide."
+        />
+        <meta
+          name="keywords"
+          content="Logistics services, freight services, air freight, ocean freight, road transport, rail freight, warehousing, global logistics solutions, supply chain management, My Ocean Logistics"
+        />
+        <meta
+          property="og:title"
+          content="Logistics & Freight Services | My Ocean Logistics"
+        />
+        <meta
+          property="og:description"
+          content="Discover comprehensive logistics and freight services from My Ocean Logistics. Your trusted partner for air, ocean, road, and rail transport, plus secure warehousing and custom logistics solutions."
+        />
+        <meta property="og:image" content="/src/assets/mol.png" />
+        <meta property="og:url" content="https://mol-one.vercel.app/services" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Logistics & Freight Services | My Ocean Logistics"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore end-to-end logistics and freight services with My Ocean Logistics — your expert partner for air, ocean, rail, and road transportation, warehousing, and supply chain solutions."
+        />
+        <meta name="twitter:image" content="/src/assets/mol.png" />
+      </Helmet>
+
       <HeroComponent
         title="Services"
         link="/"

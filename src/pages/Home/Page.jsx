@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.css";
 import aboutus from "../../assets/homepage-aboutus.png";
-import Button from "../../components/Button"; // Import button component
+import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { PiWarehouse } from "react-icons/pi";
@@ -28,7 +29,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import testimonial1 from "../../assets/testimonial1.png";
 
-
+import { Helmet } from "react-helmet-async";
 
 const servicesData = [
   {
@@ -37,7 +38,7 @@ const servicesData = [
     icon: <PiWarehouse />,
     image: warehousingImg,
     link: "/services/warehousing",
-    data: "It must be aligned within a firm to have the most efficient...",
+    data: "Our secure and modern warehousing solutions ensure efficient inventory management, safe storage, and timely distribution for businesses of all sizes.",
   },
   {
     id: "02",
@@ -45,7 +46,7 @@ const servicesData = [
     icon: <PiAirplane />,
     image: airFreightImg,
     link: "/services/air-freight",
-    data: "It must be aligned within a firm to have the most efficient...",
+    data: "We provide fast, reliable, and cost-effective air freight services to help your business meet global shipping deadlines with ease.",
   },
   {
     id: "03",
@@ -53,7 +54,7 @@ const servicesData = [
     icon: <GiCargoShip />,
     image: oceanFreightImg,
     link: "/services/ocean-freight",
-    data: "It must be aligned within a firm to have the most efficient...",
+    data: "Our ocean freight services offer secure and economical shipping solutions for large and heavy cargo across international waters.",
   },
   {
     id: "04",
@@ -61,34 +62,36 @@ const servicesData = [
     icon: <PiTruckTrailer />,
     image: roadFreightImg,
     link: "/services/road-freight",
-    data: "It must be aligned within a firm to have the most efficient...",
+    data: "We deliver reliable and flexible road freight solutions for domestic and cross-border transport, ensuring safe and timely delivery of goods.",
   },
 ];
-
 const steps = [
   {
     id: "01",
     title: "Order Processing",
-    description: "The logistics process begins with the receipt of customer...",
+    description:
+      "The logistics process begins with efficient order processing, verifying customer requests, and preparing shipments for fast delivery.",
     image: workprocess1,
   },
   {
     id: "02",
     title: "Warehousing",
     description:
-      "Goods that are ready for shipment are stored in warehouses or...",
+      "All goods are securely stored in modern warehouses with proper inventory management, ensuring product safety and readiness for dispatch.",
     image: workprocess2,
   },
   {
     id: "03",
     title: "Order Tracking",
-    description: "Real-time tracking systems are used to monitor the...",
+    description:
+      "Real-time order tracking systems are used to monitor each shipment’s journey, offering full visibility and timely updates.",
     image: workprocess3,
   },
   {
     id: "04",
     title: "Product Delivery",
-    description: "In the final stage of logistics services.",
+    description:
+      "The final stage includes safe, on-time product delivery to the customer’s location with quality checks and confirmation.",
     image: workprocess4,
   },
 ];
@@ -182,7 +185,41 @@ const settings = {
 const Home = () => {
   return (
     <>
-      {/* Hero Section */}
+      <Helmet>
+        <title>
+          My Ocean Logistics | Global Logistics, Freight & Supply Chain Experts
+        </title>
+        <meta
+          name="description"
+          content="Discover world-class logistics solutions with My Ocean Logistics. We offer professional air freight, ocean freight, road and rail transportation, warehousing, and complete supply chain management tailored to your business."
+        />
+        <meta
+          name="keywords"
+          content="My Ocean Logistics, global logistics, freight solutions, air freight services, ocean freight services, road freight, rail transportation, warehousing solutions, supply chain management, international shipping"
+        />
+        <meta
+          property="og:title"
+          content="My Ocean Logistics | Global Logistics & Freight Experts"
+        />
+        <meta
+          property="og:description"
+          content="Explore reliable and efficient logistics solutions with My Ocean Logistics. From freight forwarding to warehousing, we simplify your supply chain and connect your business to the world."
+        />
+        <meta property="og:image" content="/src/assets/mol.png" />
+        <meta property="og:url" content="https://mol-one.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="My Ocean Logistics | Trusted Freight & Logistics Partner"
+        />
+        <meta
+          name="twitter:description"
+          content="Get seamless freight and logistics solutions with My Ocean Logistics. We provide air, ocean, road, and rail transport and warehousing services tailored for global businesses."
+        />
+        <meta name="twitter:image" content="/src/assets/mol.png" />
+      </Helmet>
+
       <div className="homepage">
         <div className="hero-overlay">
           <div className="hero-content">
@@ -196,112 +233,149 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Features Section - Overlapping Hero */}
       <section className="features-container">
         {[
-          { id: "01", title: "Packaging & Storage" },
-          { id: "02", title: "Safety & Quality" },
-          { id: "03", title: "Delivery On Time" },
+          {
+            id: "01",
+            title: "Packaging & Secure Storage",
+            description:
+              "We offer professional packaging and secure storage solutions to protect your products and ensure safe delivery.",
+          },
+          {
+            id: "02",
+            title: "Safety & Quality Assurance",
+            description:
+              "We prioritize safety and quality with strict checks at every step to deliver products in perfect condition.",
+          },
+          {
+            id: "03",
+            title: "Timely & Reliable Delivery",
+            description:
+              "Our expert logistics team ensures fast, on-time delivery with real-time tracking and dependable service.",
+          },
         ].map((feature) => (
-          <div className="feature-card" key={feature.id}>
-            <div className="feature-number">{feature.id}</div>
-            <h3 className="feature-title">{feature.title}</h3>
-            <p className="feature-description">
-              We understand the importance of timely delivery.
-            </p>
+          <article className="feature-card" key={feature.id}>
+            <header>
+              <div className="feature-number">{feature.id}</div>
+              <h2 className="feature-title">{feature.title}</h2>
+            </header>
+            <p className="feature-description">{feature.description}</p>
             <div className="feature-line"></div>
-          </div>
+          </article>
         ))}
       </section>
 
-      <section className="about-us">
-        {/* Left Content */}
-        <div className="about-content">
-          <h3 className="about-subtitle">MORE ABOUT US</h3>
-          <h1 className="about-title">We get solutions to grow transport.</h1>
+      <section className="about-us" aria-labelledby="about-title">
+        <article className="about-content">
+          <h3 className="about-subtitle">
+            More About Our Logistics & Transport Services
+          </h3>
+          <h1 id="about-title" className="about-title">
+            We provide innovative solutions to grow global transport and
+            logistics.
+          </h1>
           <div className="about-features">
             <div className="about-feature">
               <IoCheckmarkCircleOutline className="about-icon" />
-              <p>Is always more than our expectation due to your support.</p>
+              <p>
+                Our customer satisfaction is always beyond expectations thanks
+                to your continued trust and support.
+              </p>
             </div>
             <div className="about-feature">
               <IoCheckmarkCircleOutline className="about-icon" />
               <p>
-                We guarantee trusted service for us to grow more around the
-                world.
+                We guarantee reliable and secure transport services that help us
+                expand across the world.
               </p>
             </div>
           </div>
           <div className="about-buttons">
             <Button
-              text="ABOUT COMPANY"
+              text="Learn More About Our Company"
               className="primary-btn"
               link="/about"
+              aria-label="Learn more about our company"
             />
-            <Button text="HOW WE WORK" variant="underline" link="/about" />
+            <Button
+              text="See How We Work"
+              variant="underline"
+              link="/about"
+              aria-label="See how we work"
+            />
           </div>
-        </div>
+        </article>
 
-        {/* Right Image */}
-        <div className="about-image">
-          <img src={aboutus} alt="About Us" loading="lazy" />
-        </div>
+        <figure className="about-image">
+          <img
+            src={aboutus}
+            alt="Professional logistics team managing global transport solutions"
+            loading="lazy"
+          />
+        </figure>
       </section>
 
-      <section className="services-section">
+      <section className="services-section" aria-labelledby="services-heading">
         {servicesData.map((service) => (
-          <div key={service.id} className="services-card">
-            <img
-              src={service.image}
-              alt={service.title}
-              className="services-img"
-            />
-            <div className="services-overlay">
-              {/* Normal State Content */}
-              <div className="services-header">
-                <h1 className="services-number">{service.id}</h1>
-                <h2 className="services-title">{service.title}</h2>
+          <Link
+            to={service.link}
+            key={service.id}
+            className="services-card-link"
+            aria-label={`Learn more about our ${service.title} service`}
+          >
+            <article className="services-card">
+              <img
+                src={service.image}
+                alt={`${service.title} - Professional logistics service`}
+                className="services-img"
+                loading="lazy"
+              />
+              <div className="services-overlay">
+                <div className="services-header">
+                  <h3 className="services-number">{service.id}</h3>
+                  <h3 className="services-title">{service.title}</h3>
+                </div>
+                <div className="services-icon">{service.icon}</div>
+                <div className="services-hover-content">
+                  <p className="services-text">{service.data}</p>
+                  <span className="services-link">LEARN MORE</span>
+                </div>
               </div>
-              <div className="services-icon">{service.icon}</div>
-
-              {/* Hover Content (Initially Hidden) */}
-              <div className="services-hover-content">
-                <p className="services-text">{service.data}</p>
-                <a href={service.link} className="services-link">
-                  READ MORE
-                </a>
-              </div>
-            </div>
-          </div>
+            </article>
+          </Link>
         ))}
       </section>
 
-      <section className="work-process">
-        {/* Section Title */}
-        <h3 className="work-process-subtitle">WORK PROCESS</h3>
-        <h1 className="work-process-title">Logistics Workflow</h1>
+      <section className="work-process" aria-labelledby="workflow-title">
+        <h3 className="work-process-subtitle">Work Process Overview</h3>
+        <h2 id="workflow-title" className="work-process-title">
+          Our Logistics Workflow for Reliable Delivery
+        </h2>
 
-        {/* Background Image */}
         <div className="workflow-container">
           <img
             src={workprocessBg}
-            alt="Workflow Background"
+            alt="Logistics workflow background visual"
             className="workflow-bg"
+            loading="lazy"
           />
 
-          {/* Steps */}
           <div className="workflow-steps">
-            {steps.map((step, index) => (
-              <div className="workflow-step" key={index}>
+            {steps.map((step) => (
+              <article className="workflow-step" key={step.id}>
                 <div className="workflow-step-number">{step.id}</div>
                 <img
                   src={step.image}
-                  alt={step.title}
+                  alt={`${step.title} illustration`}
                   className="workflow-step-image"
+                  loading="lazy"
                 />
-                <h2 className="workflow-step-title">{step.title}</h2>
-                <p className="workflow-step-description">{step.description}</p>
-              </div>
+                <h3 className="workflow-step-title">{step.title}</h3>
+                <p className="workflow-step-description">
+                  {step.description.split(" ").slice(0, 10).join(" ")}
+                  {step.description.split(" ").length > 10 ? "..." : ""}
+                </p>
+              </article>
             ))}
           </div>
         </div>
@@ -324,19 +398,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="reviews">
-        <div className="reviews-section">
-          <h1>
-            Client <span className="highlight">Reviews</span>
-          </h1>
-          <Slider {...settings} className="reviews-container">
-            {reviews.map((review, index) => (
-              <ReviewCard key={index} {...review} />
-            ))}
-          </Slider>
-        </div>
-      </div> */}
 
       <div className="testimonial-section">
         <div className="testimonial-container">
