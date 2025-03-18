@@ -6,7 +6,6 @@ import { IoIosArrowRoundForward, IoIosArrowDown } from "react-icons/io";
 import { CiMail, CiLocationOn } from "react-icons/ci";
 import { MdOutlinePhone, MdOutlineFileDownload } from "react-icons/md";
 import { FaRegFilePdf } from "react-icons/fa6";
-import singleservicebg1 from "../../assets/singleservicebg1.png";
 
 const SingleService = () => {
   const { serviceid } = useParams();
@@ -113,7 +112,7 @@ const SingleService = () => {
 
         <main className="singleservice-content">
           <img
-            src={serviceData.image || singleservicebg1}
+            src={serviceData.image}
             alt={serviceData.title}
             className="singleservice-image"
           />
