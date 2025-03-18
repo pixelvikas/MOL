@@ -29,7 +29,6 @@ const services = [
 const Services = () => {
   return (
     <>
-      {/* Hero Section */}
       <HeroComponent
         title="Services"
         link="/"
@@ -37,15 +36,12 @@ const Services = () => {
         current="SERVICES"
       />
 
-      {/* Services Section */}
       <div className="servicepage-section">
-        {/* Titles */}
         <div className="servicepage-header">
           <h1 className="servicepage-title">OUR SERVICES</h1>
           <h2 className="servicepage-subtitle">Logistics services</h2>
         </div>
 
-        {/* Services Grid */}
         <div className="servicepage-grid">
           {services.map((service, index) => (
             <div key={index} className="servicepage-card">
@@ -56,13 +52,11 @@ const Services = () => {
                     alt={service.title}
                     className="servicepage-image"
                   />
-                  {/* Arrow appears at center on hover */}
                   <div className="servicepage-overlay">
                     <FaArrowRight className="servicepage-arrow" />
                   </div>
                 </div>
 
-                {/* Service Title */}
                 <div className="servicepage-title-container">
                   <h3 className="servicepage-service-title">{service.title}</h3>
                 </div>
@@ -73,10 +67,8 @@ const Services = () => {
       </div>
 
       <div className="servicepage-contact">
-        {/* Background Image */}
         <div className="servicepage-overlay"></div>
 
-        {/* Content Section */}
         <div className="servicepage-content">
           <h1>Looking for the best logistics transport service?</h1>
           <Button text="CONTACT US" className="primary-btn" link="/contact" />
