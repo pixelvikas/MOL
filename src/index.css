@@ -513,17 +513,27 @@ html {
   }
 }
 
-/* 🔹 Hero Component */
 .hero-component-section {
   position: relative;
   width: 100%;
-  padding: 2rem;
   height: 381px;
-  background: url("./assets/heroCompBG.png") no-repeat center center/cover;
   display: flex;
+  padding: 2rem;
+
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero-component-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* 🔹 Overlay */
