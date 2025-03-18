@@ -110,8 +110,8 @@ const Services = () => {
       </div>
 
       <div className="servicepage-history">
-        <h2 className="servicepage-history-title">HISTORY</h2>
-        <h1 className="servicepage-history-subtitle">Our Company History</h1>
+        <h2 className="servicepage-history-title">PROCESS</h2>
+        <h1 className="servicepage-history-subtitle">Our Company Process</h1>
 
         <div className="servicepage-timeline">
           <div className="servicepage-timeline-step">

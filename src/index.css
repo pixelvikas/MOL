@@ -626,7 +626,7 @@ html {
 /* Logo loader styles */
 .logo-loader {
   width: 79px;
-  height: 52px;
+  height: 79px;
   /* Ensure the height and width are proportional */
   animation: scaleLogo 1.5s ease-in-out infinite;
   /* Animation for scaling */
