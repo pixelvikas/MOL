@@ -15,12 +15,16 @@ import Button from "../../components/Button";
 import "./style.css";
 
 const services = [
-  { img: service1, title: "Warehousing" },
-  { img: service2, title: "Air Freight" },
-  { img: service3, title: "Ocean Freight" },
-  { img: service4, title: "Road Freight" },
-  { img: service5, title: "Rail Freight" },
-  { img: service6, title: "Logistics Solution" },
+  { img: service1, title: "Warehousing", link: "/services/warehousing" },
+  { img: service2, title: "Air Freight", link: "/services/air-freight" },
+  { img: service3, title: "Ocean Freight", link: "/services/ocean-freight" },
+  { img: service4, title: "Road Freight", link: "/services/road-freight" },
+  { img: service5, title: "Rail Freight", link: "/services/rail-freight" },
+  {
+    img: service6,
+    title: "Logistics Solution",
+    link: "/services/logistics-solutions",
+  },
 ];
 
 const Services = () => {
@@ -46,22 +50,24 @@ const Services = () => {
         <div className="servicepage-grid">
           {services.map((service, index) => (
             <div key={index} className="servicepage-card">
-              <div className="servicepage-image-container">
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="servicepage-image"
-                />
-                {/* Arrow appears at center on hover */}
-                <div className="servicepage-overlay">
-                  <FaArrowRight className="servicepage-arrow" />
+              <a href={service.link}>
+                <div className="servicepage-image-container">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="servicepage-image"
+                  />
+                  {/* Arrow appears at center on hover */}
+                  <div className="servicepage-overlay">
+                    <FaArrowRight className="servicepage-arrow" />
+                  </div>
                 </div>
-              </div>
 
-              {/* Service Title */}
-              <div className="servicepage-title-container">
-                <h3 className="servicepage-service-title">{service.title}</h3>
-              </div>
+                {/* Service Title */}
+                <div className="servicepage-title-container">
+                  <h3 className="servicepage-service-title">{service.title}</h3>
+                </div>
+              </a>
             </div>
           ))}
         </div>
@@ -74,7 +80,7 @@ const Services = () => {
         {/* Content Section */}
         <div className="servicepage-content">
           <h1>Looking for the best logistics transport service?</h1>
-          <Button text="CONTACT US" className="primary-btn" />
+          <Button text="CONTACT US" className="primary-btn" link="/contact" />
         </div>
       </div>
 

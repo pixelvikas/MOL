@@ -185,7 +185,7 @@ const About = () => {
             </div>
           </div>
           {/* Learn More Button */}
-          <Button text="LEARN MORE" className="primary-btn" />
+          <Button text="LEARN MORE" className="primary-btn" link="/contact" />
         </div>
 
         {/* Right Section */}
@@ -225,7 +225,7 @@ const About = () => {
             services, carrier-partners, and dedicated employees.
           </p>
 
-          <Button text="CONTACT US" className="primary-btn" />
+          <Button text="CONTACT US" className="primary-btn" link="/contact" />
         </div>
       </div>
       <div className="history-section">

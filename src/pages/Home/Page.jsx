@@ -40,6 +40,7 @@ const servicesData = [
     title: "Warehousing",
     icon: <PiWarehouse />,
     image: warehousingImg,
+    link: "/services/warehousing",
     data: "It must be aligned within a firm to have the most efficient...",
   },
   {
@@ -47,6 +48,7 @@ const servicesData = [
     title: "Air Freight",
     icon: <PiAirplane />,
     image: airFreightImg,
+    link: "/services/air-freight",
     data: "It must be aligned within a firm to have the most efficient...",
   },
   {
@@ -54,6 +56,7 @@ const servicesData = [
     title: "Ocean Freight",
     icon: <GiCargoShip />,
     image: oceanFreightImg,
+    link: "/services/ocean-freight",
     data: "It must be aligned within a firm to have the most efficient...",
   },
   {
@@ -61,6 +64,7 @@ const servicesData = [
     title: "Road Freight",
     icon: <PiTruckTrailer />,
     image: roadFreightImg,
+    link: "/services/road-freight",
     data: "It must be aligned within a firm to have the most efficient...",
   },
 ];
@@ -187,7 +191,11 @@ const Home = () => {
         <div className="hero-overlay">
           <div className="hero-content">
             <h1>Reliable & Express Logistics Solutions</h1>
-            <Button text="GET STARTED" className="primary-btn" />
+            <Button
+              text="GET STARTED"
+              className="primary-btn"
+              link="/contact"
+            />
           </div>
         </div>
       </div>
@@ -229,8 +237,12 @@ const Home = () => {
             </div>
           </div>
           <div className="about-buttons">
-            <Button text="ABOUT COMPANY" className="primary-btn" />
-            <Button text="HOW WE WORK" variant="underline" />
+            <Button
+              text="ABOUT COMPANY"
+              className="primary-btn"
+              link="/about"
+            />
+            <Button text="HOW WE WORK" variant="underline" link="/about" />
           </div>
         </div>
 
@@ -259,7 +271,7 @@ const Home = () => {
               {/* Hover Content (Initially Hidden) */}
               <div className="services-hover-content">
                 <p className="services-text">{service.data}</p>
-                <a href="#" className="services-link">
+                <a href={service.link} className="services-link">
                   READ MORE
                 </a>
               </div>
