@@ -1,5 +1,5 @@
 import React from "react";
-import "./loadingpage.css"; // Add the styles for the loading spinner
+import "./loadingpage.css";
 import logo from "../assets/logo.png";
 
 const LoadingPage = () => {

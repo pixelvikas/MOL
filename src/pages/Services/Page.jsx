@@ -9,7 +9,6 @@ import service5 from "../../assets/railfreightservice.png";
 import service6 from "../../assets/logisticssolutionservice.png";
 
 import { FaArrowRight } from "react-icons/fa6";
-import serviceContact from "../../assets/aboutusnobg.png";
 
 import Button from "../../components/Button";
 import "./style.css";
