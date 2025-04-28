@@ -9,7 +9,7 @@ import aboutprofile from "../../assets/aboutprofile.png";
 
 import Button from "../../components/Button";
 
-import aboutuscontactbg from "../../assets/aboutuscontactbg.png";
+import aboutuscontactbg from "../../assets/aboutuscontactbg.jpeg";
 import history1 from "../../assets/history1.png";
 import history2 from "../../assets/history2.png";
 import history3 from "../../assets/history3.png";
@@ -63,10 +63,10 @@ const About = () => {
   ];
 
   const aboutData = [
-    { icon: aboutno1, value: "35", label: "+ Years of Experience" },
-    { icon: aboutno2, value: "528", label: "+ Cities served worldwide" },
-    { icon: aboutno3, value: "475", label: "+ Satisfied clients" },
-    { icon: aboutno4, value: "45", label: "+ Companies we help" },
+    { icon: aboutno1, value: "75+", label: "Years of Expertise" },
+    { icon: aboutno2, value: "25+", label: "Cities served worldwide" },
+    { icon: aboutno3, value: "10+", label: "Satisfied clients" },
+    { icon: aboutno4, value: "45+", label: "Companies we help" },
   ];
 
   const reviews = [
@@ -193,7 +193,7 @@ const About = () => {
         <div className="about-page-content">
           <h4 className="about-page-subtitle">ABOUT US</h4>
           <h1 id="about-page-title" className="about-page-title">
-            Reliable and Comprehensive Transportation Solutions
+            Reliable and Comprehensive Freight Services
           </h1>
           <p className="about-page-description">
             At My Ocean Logistics, we specialize in connecting communities and
@@ -249,9 +249,6 @@ const About = () => {
               alt="Logistics worker handling cargo boxes for global transport"
               className="about-page-image"
             />
-            <figcaption>
-              Efficient cargo handling by our dedicated logistics team.
-            </figcaption>
           </figure>
 
           {/* CEO Card */}
@@ -261,21 +258,18 @@ const About = () => {
           >
             <img
               src={aboutprofile}
-              alt="John R. Holland, CEO of Global Transport Services"
+              alt="Amruta Vilas Surve, Founder My Ocean Logistics"
               className="about-page-ceo-image"
             />
             <h2 id="ceo-card-title" className="about-page-ceo-name">
-              John R. Holland
+              Amruta Vilas Surve
             </h2>
-            <p className="about-page-ceo-title">
-              Founder & Chief Executive Officer
-            </p>
+            <p className="about-page-ceo-title">Founder My Ocean Logistics</p>
             <p className="about-page-ceo-description">
-              At My Ocean Logistics, we are committed to delivering top-tier
-              global transportation and logistics solutions. Our mission is to
-              ensure safe, timely, and cost-effective cargo services worldwide.
+              At My Ocean Logistics, we are a company focused on shipping supply
+              and demand needs globally. Our mission is to ensure simplifying
+              logistics and freight services to worldwide locations.
             </p>
-            <p className="about-page-ceo-signature">John R. Holland</p>
           </article>
         </div>
       </section>
@@ -307,45 +301,6 @@ const About = () => {
             link="/contact"
             aria-label="Contact us for transportation and logistics services"
           />
-        </div>
-      </div>
-
-      <div className="history-section" aria-labelledby="company-history-title">
-        <div className="history-header">
-          <h1 id="company-history-title" className="history-main-title">
-            History
-          </h1>
-          <h2 className="history-subtitle">Our Company History</h2>
-        </div>
-
-        <div className="history-card-section">
-          {historyData.map((item, index) => (
-            <article
-              key={index}
-              className={`history-item history-mobile ${
-                index % 2 === 0 ? "history-item-odd" : "history-item-even"
-              }`}
-              aria-labelledby={`history-title-${index}`}
-            >
-              <h3 className="history-year">{item.year}</h3>
-              <h4 id={`history-title-${index}`} className="history-title">
-                {item.title}
-              </h4>
-              <p className="history-text">
-                {item.text} Our logistics company continues to strive for
-                reliable freight shipping and innovative transport solutions.
-              </p>
-              <div className="timeline">
-                <div className="timeline-dot" aria-hidden="true"></div>
-              </div>
-              <img
-                src={item.image}
-                alt={`${item.title} - ${item.year}`}
-                className="history-image"
-                loading="lazy"
-              />
-            </article>
-          ))}
         </div>
       </div>
 

@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import aboutus from "../../assets/homepage-aboutus.png";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
-import { PiWarehouse } from "react-icons/pi";
+import { GoPackageDependencies } from "react-icons/go";
+
 import { PiAirplane } from "react-icons/pi";
 import { GiCargoShip } from "react-icons/gi";
 import { PiTruckTrailer } from "react-icons/pi";
 
-import warehousingImg from "../../assets/warehousing.png";
+import heroBg1 from "../../assets/herobg.png";
+import heroBg2 from "../../assets/herobg2.jpeg";
+import heroBg3 from "../../assets/herobg3.jpeg";
+import heroBg4 from "../../assets/herobg4.jpeg";
+
+import warehousingImg from "../../assets/projectcontainerservice.png";
 import airFreightImg from "../../assets/airfreight.png";
 import oceanFreightImg from "../../assets/oceanfreight.png";
 import roadFreightImg from "../../assets/roadfreight.png";
+import LogisticsSolution from "../../assets/logisticssolutionservice.png";
 
-import workprocessBg from "../../assets/workbg.png";
 import workprocess1 from "../../assets/work1.png";
 import workprocess2 from "../../assets/work2.png";
 import workprocess3 from "../../assets/work3.png";
@@ -34,11 +40,11 @@ import { Helmet } from "react-helmet-async";
 const servicesData = [
   {
     id: "01",
-    title: "Warehousing",
-    icon: <PiWarehouse />,
-    image: warehousingImg,
-    link: "/services/warehousing",
-    data: "Our secure and modern warehousing solutions ensure efficient inventory management, safe storage, and timely distribution for businesses of all sizes.",
+    title: "Ocean Freight",
+    icon: <GiCargoShip />,
+    image: oceanFreightImg,
+    link: "/services/ocean-freight",
+    data: "Our ocean freight services offer secure and economical shipping solutions for large and heavy cargo across international waters.",
   },
   {
     id: "02",
@@ -50,52 +56,21 @@ const servicesData = [
   },
   {
     id: "03",
-    title: "Ocean Freight",
-    icon: <GiCargoShip />,
-    image: oceanFreightImg,
-    link: "/services/ocean-freight",
-    data: "Our ocean freight services offer secure and economical shipping solutions for large and heavy cargo across international waters.",
-  },
-  {
-    id: "04",
     title: "Road Freight",
     icon: <PiTruckTrailer />,
     image: roadFreightImg,
     link: "/services/road-freight",
     data: "We deliver reliable and flexible road freight solutions for domestic and cross-border transport, ensuring safe and timely delivery of goods.",
   },
-];
-const steps = [
-  {
-    id: "01",
-    title: "Order Processing",
-    description:
-      "The logistics process begins with efficient order processing, verifying customer requests, and preparing shipments for fast delivery.",
-    image: workprocess1,
-  },
-  {
-    id: "02",
-    title: "Warehousing",
-    description:
-      "All goods are securely stored in modern warehouses with proper inventory management, ensuring product safety and readiness for dispatch.",
-    image: workprocess2,
-  },
-  {
-    id: "03",
-    title: "Order Tracking",
-    description:
-      "Real-time order tracking systems are used to monitor each shipment’s journey, offering full visibility and timely updates.",
-    image: workprocess3,
-  },
   {
     id: "04",
-    title: "Product Delivery",
-    description:
-      "The final stage includes safe, on-time product delivery to the customer’s location with quality checks and confirmation.",
-    image: workprocess4,
+    title: "Logistics Solution",
+    icon: <GoPackageDependencies />,
+    image: LogisticsSolution,
+    link: "/services/logistics-solutions",
+    data: "Our ocean freight services offer secure and economical shipping solutions for large and heavy cargo across international waters.",
   },
 ];
-
 const reviews = [
   {
     name: "Priya Sharma",
@@ -161,7 +136,7 @@ const ReviewCard = ({ name, role, review, image }) => {
 const settings = {
   infinite: true,
   speed: 200,
-  slidesToShow: 1, // Show 1 slide at a time (matches reference image)
+  slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
@@ -182,7 +157,18 @@ const settings = {
     },
   ],
 };
+
 const Home = () => {
+  const images = [heroBg1, heroBg2, heroBg3, heroBg4];
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    }, 5000); // 5 seconds per slide
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -221,8 +207,17 @@ const Home = () => {
       </Helmet>
 
       <div className="homepage">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`slide ${index === currentImage ? "active" : ""}`}
+            style={{ backgroundImage: `url(${image})` }}
+          ></div>
+        ))}
+
         <div className="hero-overlay">
           <div className="hero-content">
+            <p>My Ocean Logistics</p>
             <h1>Reliable & Express Logistics Solutions</h1>
             <Button
               text="GET STARTED"
@@ -237,19 +232,19 @@ const Home = () => {
         {[
           {
             id: "01",
-            title: "Packaging & Secure Storage",
+            title: "Freight Forwarding",
             description:
-              "We offer professional packaging and secure storage solutions to protect your products and ensure safe delivery.",
+              "We offer freight service globally with cost effective pricing for you to ship effectively with international shipping",
           },
           {
             id: "02",
-            title: "Safety & Quality Assurance",
+            title: "Custom Clearance",
             description:
               "We prioritize safety and quality with strict checks at every step to deliver products in perfect condition.",
           },
           {
             id: "03",
-            title: "Timely & Reliable Delivery",
+            title: "Transportation",
             description:
               "Our expert logistics team ensures fast, on-time delivery with real-time tracking and dependable service.",
           },
@@ -271,15 +266,15 @@ const Home = () => {
             More About Our Logistics & Transport Services
           </h3>
           <h1 id="about-title" className="about-title">
-            We provide innovative solutions to grow global transport and
-            logistics.
+            We provide innovative freight forwarding solutions to effectively
+            ship your goods globally.
           </h1>
           <div className="about-features">
             <div className="about-feature">
               <IoCheckmarkCircleOutline className="about-icon" />
               <p>
-                Our customer satisfaction is always beyond expectations thanks
-                to your continued trust and support.
+                We are focused on delivering your goods with specialised skills
+                and safety
               </p>
             </div>
             <div className="about-feature">
@@ -346,7 +341,7 @@ const Home = () => {
         ))}
       </section>
 
-      <section className="work-process" aria-labelledby="workflow-title">
+      {/* <section className="work-process" aria-labelledby="workflow-title">
         <h3 className="work-process-subtitle">Work Process Overview</h3>
         <h2 id="workflow-title" className="work-process-title">
           Our Logistics Workflow for Reliable Delivery
@@ -379,7 +374,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <div className="number-section">
         <img src={numberBg} alt="Background" className="number-bg" />
@@ -388,13 +383,13 @@ const Home = () => {
           <div className="product-info">
             <h1>426</h1>
             <p>
-              Products <br />
-              Transport
+              Shipments <br />
+              Shipped
             </p>
           </div>
           <div className="call-info">
-            <p>Toll Free call</p>
-            <p>+022-22334455</p>
+            <p>Contact Number</p>
+            <p>+91 9152599995</p>
           </div>
         </div>
       </div>

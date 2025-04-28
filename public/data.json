@@ -1,8 +1,8 @@
 {
     "services": [
         {
-            "serviceid": "warehousing",
-            "title": "Warehousing Services",
+            "serviceid": "project-cargo",
+            "title": "Project Cargo Services",
             "image": "../singleservicebg1.png",
             "description": [
                 "Our professional warehousing services ensure the safe, secure, and efficient storage of goods in strategically located warehouses across key global regions. We understand that storage is a critical part of any supply chain, which is why we offer flexible short-term and long-term warehousing solutions tailored to your business needs.",

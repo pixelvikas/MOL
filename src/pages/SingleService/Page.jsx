@@ -37,11 +37,7 @@ const SingleService = () => {
       answer:
         "We offer comprehensive transportation and logistics services including air freight, ocean freight, rail freight, road freight, warehousing, and end-to-end supply chain solutions. Our services are designed to cater to both domestic and international shipping needs with reliability and efficiency.",
     },
-    {
-      question: "How can I track my cargo shipment in real-time?",
-      answer:
-        "You can easily track your shipment through our advanced tracking system by entering your unique tracking number on our website. This allows you to view real-time updates on your cargo's location, transit status, and estimated delivery date.",
-    },
+
     {
       question: "How are shipping rates calculated for freight services?",
       answer:
@@ -57,7 +53,7 @@ const SingleService = () => {
       question:
         "Can you provide warehousing and inventory management solutions?",
       answer:
-        "Absolutely! We offer secure warehousing facilities with climate control, real-time inventory tracking, and professional handling. Whether you need short-term storage or long-term warehousing as part of your supply chain, our solutions are fully customizable to fit your business needs.",
+        "Absolutely! We offer secure warehousing facilities with climate control, and professional handling. Whether you need short-term storage or long-term warehousing as part of your supply chain, our solutions are fully customizable to fit your business needs.",
     },
     {
       question: "What industries do you specialize in serving?",
@@ -139,14 +135,14 @@ const SingleService = () => {
             <h3>CONTACT INFO</h3>
             <ul>
               <li>
-                <CiMail /> contact@company.com
+                <CiMail /> info@myoceanlogistics.com
               </li>
               <li>
-                <MdOutlinePhone /> 123456789
+                <MdOutlinePhone /> 91 9152599995
               </li>
               <li>
                 <CiLocationOn />
-                123 Business Street, NY
+                Andheri East
               </li>
             </ul>
           </div>

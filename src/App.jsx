@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import LoadingPage from "./components/LoadingPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsappButton";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Error from "./pages/Error/Page"; // Ensure Error component exists
 
@@ -45,6 +46,7 @@ const MainApp = ({ loading, setLoading, progress, setProgress }) => {
   return (
     <>
       <Header />
+
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -55,6 +57,7 @@ const MainApp = ({ loading, setLoading, progress, setProgress }) => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<Error />} />
       </Routes>
+      <WhatsAppButton phoneNumber="9152599995" size={50} />
       <Footer />
       <ScrollToTopButton />
     </>

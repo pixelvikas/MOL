@@ -64,16 +64,22 @@ const Footer = () => {
             <h3>Services</h3>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <a href="/services/ocean-freight">Ocean Freight</a>
               </li>
               <li>
-                <a href="#">About us</a>
+                <a href="/services/air-freight">Air Freight</a>
               </li>
               <li>
-                <a href="#">Services</a>
+                <a href="/services/road-freight">Road Freight</a>
               </li>
               <li>
-                <a href="#">Our Team</a>
+                <a href="/services/rail-freight">Rail Freight</a>
+              </li>
+              <li>
+                <a href="/services/project-cargo">Project Cargo</a>
+              </li>
+              <li>
+                <a href="/services/logistics-solutions">Logistics Solution</a>
               </li>
             </ul>
           </div>
@@ -87,14 +93,17 @@ const Footer = () => {
               </li>
               <li>
                 <IoCallOutline className="footer-contact" />
-                <a href="tel:+02222334455" aria-label="Call us">
-                  +022-22334455
+                <a href="tel:+9152599995" aria-label="Call us">
+                  +9152599995
                 </a>
               </li>
               <li>
                 <CiMail className="footer-contact" />
-                <a href="mailto:Info@mol.com" aria-label="Email us">
-                  Info@mol.com
+                <a
+                  href="mailto:Info@myoceanlogistics.com"
+                  aria-label="Email us"
+                >
+                  Info@myoceanlogistics.com
                 </a>
               </li>
             </ul>

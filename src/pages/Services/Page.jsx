@@ -2,12 +2,12 @@ import React from "react";
 import "./style.css";
 import HeroComponent from "../../components/HeroComponent";
 
-import service1 from "../../assets/warehousingservice.png";
+import service1 from "../../assets/projectcontainerservice1.png";
 import service2 from "../../assets/airfreightservice.png";
 import service3 from "../../assets/oceanfreightservice.png";
 import service4 from "../../assets/roadfreightservice.png";
 import service5 from "../../assets/railfreightservice.png";
-import service6 from "../../assets/logisticssolutionservice.png";
+import service6 from "../../assets/logisticssolutionservice1.png";
 
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -15,11 +15,11 @@ import Button from "../../components/Button";
 import { Helmet } from "react-helmet-async";
 
 const services = [
-  { img: service1, title: "Warehousing", link: "/services/warehousing" },
-  { img: service2, title: "Air Freight", link: "/services/air-freight" },
   { img: service3, title: "Ocean Freight", link: "/services/ocean-freight" },
+  { img: service2, title: "Air Freight", link: "/services/air-freight" },
   { img: service4, title: "Road Freight", link: "/services/road-freight" },
   { img: service5, title: "Rail Freight", link: "/services/rail-freight" },
+  { img: service1, title: "Project Cargo", link: "/services/project-cargo" },
   {
     img: service6,
     title: "Logistics Solution",
@@ -106,41 +106,6 @@ const Services = () => {
         <div className="servicepage-content">
           <h1>Looking for the best logistics transport service?</h1>
           <Button text="CONTACT US" className="primary-btn" link="/contact" />
-        </div>
-      </div>
-
-      <div className="servicepage-history">
-        <h2 className="servicepage-history-title">PROCESS</h2>
-        <h1 className="servicepage-history-subtitle">Our Company Process</h1>
-
-        <div className="servicepage-timeline">
-          <div className="servicepage-timeline-step">
-            <h3 className="servicepage-step-title">Step 01</h3>
-            <div className="servicepage-timeline-dot"></div>
-            <h1 className="servicepage-step-number">01</h1>
-            <p className="servicepage-step-description">Order Processing</p>
-          </div>
-
-          <div className="servicepage-timeline-step">
-            <h3 className="servicepage-step-title">Step 02</h3>
-            <div className="servicepage-timeline-dot"></div>
-            <h1 className="servicepage-step-number">02</h1>
-            <p className="servicepage-step-description">Warehousing</p>
-          </div>
-
-          <div className="servicepage-timeline-step">
-            <h3 className="servicepage-step-title">Step 03</h3>
-            <div className="servicepage-timeline-dot"></div>
-            <h1 className="servicepage-step-number">03</h1>
-            <p className="servicepage-step-description">Order Tracking</p>
-          </div>
-
-          <div className="servicepage-timeline-step">
-            <h3 className="servicepage-step-title">Step 04</h3>
-            <div className="servicepage-timeline-dot"></div>
-            <h1 className="servicepage-step-number">04</h1>
-            <p className="servicepage-step-description">Product Delivery</p>
-          </div>
         </div>
       </div>
     </>

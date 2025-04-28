@@ -109,8 +109,7 @@ const Contact = () => {
               <IoCallOutline className="contact-icon" />
               <div className="contact-info-data">
                 <h1>Phone Number</h1>
-                <p>+1 (888) 123-5678</p>
-                <p>(+44)123 456 789</p>
+                <p>+9152599995</p>
               </div>
             </div>
 
@@ -118,8 +117,7 @@ const Contact = () => {
               <CiMail className="contact-icon" />
               <div className="contact-info-data">
                 <h1>Email Address</h1>
-                <p>info@example.com</p>
-                <p>contact@example.com</p>
+                <p>info@myoceanlogistics.com</p>
               </div>
             </div>
 
@@ -127,7 +125,7 @@ const Contact = () => {
               <SlLocationPin className="contact-icon" />
               <div className="contact-info-data">
                 <h1>Location</h1>
-                <p>Guild Street 51, North Town, London-06192, UK</p>
+                <p>Andheri East Mumbai - 59</p>
               </div>
             </div>
 
