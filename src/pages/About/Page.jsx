@@ -5,7 +5,7 @@ import { IoEarthOutline } from "react-icons/io5";
 import { PiTruckTrailer } from "react-icons/pi";
 
 import about1 from "../../assets/aboutus.png";
-import aboutprofile from "../../assets/aboutprofile.png";
+import Amruta from "../../assets/team1.png";
 
 import Button from "../../components/Button";
 
@@ -29,15 +29,11 @@ import testimonialbg1 from "../../assets/testimonialbg1.png";
 import testimonialbg2 from "../../assets/testimonialbg2.png";
 import testimonialbg3 from "../../assets/testimonialbg3.png";
 import testimonialbg4 from "../../assets/testimonialbg4.png";
-import testimonial1 from "../../assets/testimonial1.png";
+import testimonial1 from "../../assets/testimonial1.jpeg";
+import testimonial2 from "../../assets/testimonia2.png";
 
-import client1 from "../../assets/client1.png";
-import client2 from "../../assets/client2.png";
-import client3 from "../../assets/client3.png";
-import client4 from "../../assets/client4.png";
-import client5 from "../../assets/client5.png";
-import client6 from "../../assets/client6.png";
-
+import client1 from "../../assets/testimonial1.jpeg";
+import client2 from "../../assets/testimonia2.png";
 import { Helmet } from "react-helmet-async";
 
 const About = () => {
@@ -71,25 +67,18 @@ const About = () => {
 
   const reviews = [
     {
-      name: "Aditya Sharma",
-      role: "Chief Technology Officer",
+      name: "Ashton D Souza",
+      role: "Kinza, Manager",
       review:
-        "We've been using My Ocean Logistics for our international shipments, and they never disappoint. Their team ensures on-time deliveries and smooth customs clearance. Highly recommended!",
+        "My Ocean Logistics consistently delivers prompt and brilliant service. Under Miss Amruta Surve's dynamic leadership, the company's future looks bright and boundless. We wish them all the very best in their journey to continued growth!",
       image: testimonial1,
     },
     {
-      name: "Priya Verma",
-      role: "Operations Manager",
+      name: "Chirag Dattani",
+      role: "Kanex, Manager",
       review:
-        "Exceptional service! The team at My Ocean Logistics is always available to assist and make shipping stress-free. Highly professional and efficient.",
-      image: testimonial1,
-    },
-    {
-      name: "Rahul Gupta",
-      role: "Logistics Head",
-      review:
-        "Reliable and on-time! I have been using My Ocean Logistics for years, and their commitment to excellence is commendable.",
-      image: testimonial1,
+        "The communication & services throughout the shipping process has been clear and effective. Updates were provided in a timely manner, and our queries were promptly addressed by your team.",
+      image: testimonial2,
     },
   ];
 
@@ -139,7 +128,7 @@ const About = () => {
     ],
   };
 
-  const clients = [client1, client2, client3, client4, client5, client6];
+  const clients = [client1, client2];
 
   return (
     <>
@@ -257,7 +246,7 @@ const About = () => {
             aria-labelledby="ceo-card-title"
           >
             <img
-              src={aboutprofile}
+              src={Amruta}
               alt="Amruta Vilas Surve, Founder My Ocean Logistics"
               className="about-page-ceo-image"
             />

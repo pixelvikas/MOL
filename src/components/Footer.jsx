@@ -93,8 +93,8 @@ const Footer = () => {
               </li>
               <li>
                 <IoCallOutline className="footer-contact" />
-                <a href="tel:+9152599995" aria-label="Call us">
-                  +9152599995
+                <a href="tel:+02245158999" aria-label="Call us">
+                  +02245158999
                 </a>
               </li>
               <li>
@@ -103,7 +103,7 @@ const Footer = () => {
                   href="mailto:Info@myoceanlogistics.com"
                   aria-label="Email us"
                 >
-                  Info@myoceanlogistics.com
+                  support@myoceanlogistics.com
                 </a>
               </li>
             </ul>

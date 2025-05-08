@@ -150,7 +150,7 @@ const Contact = () => {
       <div className="map-container">
         <iframe
           title="Our Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7539.824060116297!2d72.89296369091318!3d19.1115147746523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c80ae62566a9%3A0x84580ff1332a9b61!2sEkta%20CHS!5e0!3m2!1sen!2sin!4v1742240338797!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3131.9994078278883!2d72.8667327!3d19.0997093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c84449930093%3A0x44760442773a5fce!2sAero%20View%20Society%2C%202%2C%20Church%20Pakhadi%20Rd%2C%20Sahar%20Village%2C%20Andheri%20East%2C%20Mumbai%2C%20Maharashtra%20400099!5e1!3m2!1sen!2sin!4v1746712041015!5m2!1sen!2sin"
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

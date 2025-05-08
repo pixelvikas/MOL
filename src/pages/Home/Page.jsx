@@ -32,8 +32,8 @@ import numberBg from "../../assets/numberbg.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import testimonial1 from "../../assets/testimonial1.png";
+import testimonial1 from "../../assets/testimonial1.jpeg";
+import testimonial2 from "../../assets/testimonia2.png";
 
 import { Helmet } from "react-helmet-async";
 
@@ -73,52 +73,18 @@ const servicesData = [
 ];
 const reviews = [
   {
-    name: "Priya Sharma",
-    role: "Home Loan",
-    rating: 4.5,
+    name: "Ashton D Souza",
+    role: "Kinza, Manager",
     review:
-      "I'm so glad I chose this consultancy for my home loan. They guided me through every step, making the process smooth and stress-free.",
+      "My Ocean Logistics consistently delivers prompt and brilliant service. Under Miss Amruta Surve's dynamic leadership, the company's future looks bright and boundless. We wish them all the very best in their journey to continued growth!",
     image: testimonial1,
   },
   {
-    name: "Amit Verma",
-    role: "Business Loan",
-    rating: 5,
+    name: "Chirag Dattani",
+    role: "Kanex, Manager",
     review:
-      "Exceptional service! The team provided me with the best financial advice and helped me secure my business loan effortlessly.",
-    image: testimonial1,
-  },
-  {
-    name: "Neha Gupta",
-    role: "Education Loan",
-    rating: 4,
-    review:
-      "The team was highly professional and made my education loan process hassle-free. Highly recommend their services!",
-    image: testimonial1,
-  },
-  {
-    name: "Priya Sharma",
-    role: "Home Loan",
-    rating: 4.5,
-    review:
-      "I'm so glad I chose this consultancy for my home loan. They guided me through every step, making the process smooth and stress-free.",
-    image: testimonial1,
-  },
-  {
-    name: "Amit Verma",
-    role: "Business Loan",
-    rating: 5,
-    review:
-      "Exceptional service! The team provided me with the best financial advice and helped me secure my business loan effortlessly.",
-    image: testimonial1,
-  },
-  {
-    name: "Neha Gupta",
-    role: "Education Loan",
-    rating: 4,
-    review:
-      "The team was highly professional and made my education loan process hassle-free. Highly recommend their services!",
-    image: testimonial1,
+      "The communication & services throughout the shipping process has been clear and effective. Updates were provided in a timely manner, and our queries were promptly addressed by your team.",
+    image: testimonial2,
   },
 ];
 const ReviewCard = ({ name, role, review, image }) => {
