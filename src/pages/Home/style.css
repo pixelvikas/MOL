@@ -52,11 +52,7 @@
 .hero-content p {
   font-size: 2rem;
   font-weight: bold;
-  background: linear-gradient(105deg, #001e6a 10%, #f1383b 40%);
-  background-clip: text;
-  -webkit-background-clip: text; /* for Safari/Chrome */
-  color: transparent;
-  -webkit-text-fill-color: transparent; /* for Safari/Chrome */
+  color: #fff;
   line-height: 1.3;
 }
 
