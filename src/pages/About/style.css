@@ -23,7 +23,7 @@
 .about-page-title {
   font-size: 2.8rem;
   font-weight: bold;
-  color: #0c1b27;
+  color: #001e6a;
   margin-bottom: 15px;
 }
 
@@ -56,7 +56,7 @@
 .about-page-service-title {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #0c1b27;
+  color: #001e6a;
 }
 
 .about-page-service-text {
@@ -651,7 +651,7 @@
 .about-testimonial-subtitle {
   font-size: 2rem;
   font-weight: bold;
-  color: #000;
+  color: #001e6a;
 }
 
 /* 🔹 Floating Images */
@@ -812,7 +812,7 @@
 .about-client-subtitle {
   font-size: 24px;
   font-weight: bold;
-  color: #000;
+  color: #001e6a;
   margin-bottom: 20px;
 }
 

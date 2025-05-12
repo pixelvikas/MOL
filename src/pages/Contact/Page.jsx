@@ -109,7 +109,7 @@ const Contact = () => {
               <IoCallOutline className="contact-icon" />
               <div className="contact-info-data">
                 <h1>Phone Number</h1>
-                <p>+9152599995</p>
+                <p>+02245158999</p>
               </div>
             </div>
 
@@ -117,7 +117,7 @@ const Contact = () => {
               <CiMail className="contact-icon" />
               <div className="contact-info-data">
                 <h1>Email Address</h1>
-                <p>info@myoceanlogistics.com</p>
+                <p>Support@myoceanlogistics.com</p>
               </div>
             </div>
 

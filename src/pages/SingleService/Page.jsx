@@ -7,7 +7,7 @@ import { CiMail, CiLocationOn } from "react-icons/ci";
 import { MdOutlinePhone, MdOutlineFileDownload } from "react-icons/md";
 import { FaRegFilePdf } from "react-icons/fa6";
 import { Helmet } from "react-helmet-async";
-
+import PDF from "../../assets/MY OCEAN LOGISTICS.pdf";
 const SingleService = () => {
   const { serviceid } = useParams();
   const [serviceData, setServiceData] = useState(null);
@@ -135,10 +135,10 @@ const SingleService = () => {
             <h3>CONTACT INFO</h3>
             <ul>
               <li>
-                <CiMail /> info@myoceanlogistics.com
+                <CiMail /> Support@myoceanlogistics.com
               </li>
               <li>
-                <MdOutlinePhone /> 91 9152599995
+                <MdOutlinePhone /> +91 9152599995
               </li>
               <li>
                 <CiLocationOn />
@@ -151,10 +151,20 @@ const SingleService = () => {
             <h3>BROCHURES</h3>
             <ul>
               <li>
-                <FaRegFilePdf /> DOWNLOAD.PDF
-              </li>
-              <li>
-                <MdOutlineFileDownload /> DOWNLOAD.TXT
+                <a
+                  href={PDF}
+                  download
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                  }}
+                >
+                  <FaRegFilePdf />
+                  DOWNLOAD.PDF
+                </a>
               </li>
             </ul>
           </div>

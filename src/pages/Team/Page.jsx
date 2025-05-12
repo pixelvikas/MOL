@@ -6,34 +6,33 @@ import team2 from "../../assets/team2.png";
 import team3 from "../../assets/team3.png";
 import team4 from "../../assets/team4.png";
 import { FaLinkedin } from "react-icons/fa";
-
 import { Helmet } from "react-helmet-async";
 
 const Team = () => {
   const teamMembers = [
     {
-      name: "Aditya Sharma",
-      role: "Chief Technology Officer",
+      name: "Amruta Surve",
+      role: "Founder",
       img: team1,
-      linkedin: "https://linkedin.com/in/sample-aditya",
+      linkedin: "https://www.linkedin.com/in/amruta-v-9538011b/",
     },
     {
-      name: "Rahul Verma",
-      role: "Chief Marketing Officer",
+      name: "Avinash Palekar",
+      role: "Co-Founder",
       img: team2,
-      linkedin: "https://linkedin.com/in/sample-rahul",
+      linkedin: "",
     },
     {
-      name: "Sneha Patil",
-      role: "Chief Financial Officer",
+      name: "Capt. Anoop Thankachan",
+      role: "Co-Founder",
       img: team3,
-      linkedin: "https://linkedin.com/in/sample-sneha",
+      linkedin: "",
     },
     {
-      name: "Amit Desai",
-      role: "Chief Operating Officer",
+      name: "Manoj Pillai",
+      role: "Sales Advisor Board",
       img: team4,
-      linkedin: "https://linkedin.com/in/sample-amit",
+      linkedin: "https://www.linkedin.com/in/manoj-pillai-a608044/",
     },
   ];
 
@@ -68,27 +67,36 @@ const Team = () => {
       />
 
       <div className="team-section">
-        <h2 className="team-title">OUR TEAM</h2>
-        <h1 className="team-heading">Team members</h1>
+        <div className="team-header">
+          <h2 className="team-subtitle">OUR TEAM</h2>
+          <h1 className="team-title">Meet Our Leadership</h1>
+        </div>
 
         <div className="team-container">
           {teamMembers.map((member, index) => (
             <div className="team-member" key={index}>
               <div className="image-wrapper">
-                <img src={member.img} alt={member.name} />
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="member-image"
+                />
                 <div className="linkedin-overlay">
                   <a
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="linkedin-link"
+                    aria-label={`Connect with ${member.name} on LinkedIn`}
                   >
                     <FaLinkedin className="linkedin-icon" />
                   </a>
                 </div>
               </div>
-              <h3>{member.name}</h3>
-              <p>{member.role}</p>
+              <div className="member-info">
+                <h3 className="member-name">{member.name}</h3>
+                <p className="member-role">{member.role}</p>
+              </div>
             </div>
           ))}
         </div>

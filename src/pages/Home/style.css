@@ -112,7 +112,7 @@
   font-size: 1.3rem;
   font-weight: bold;
   margin-top: 20px;
-  color: #222;
+  color: #001e6a;
 }
 
 /* Feature Description */
@@ -194,7 +194,7 @@
 .about-title {
   font-size: 3rem;
   font-weight: bold;
-  color: #000;
+  color: #001e6a;
   margin-bottom: 20px;
 }
 
@@ -512,7 +512,7 @@
 .workflow-step-title {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #222;
+  color: #001e6a;
   margin-top: 10px;
 }
 
@@ -698,7 +698,7 @@
 .testimonial-title {
   font-size: 2.8rem;
   font-weight: bold;
-  color: #000;
+  color: #001e6a;
   margin-top: 10px;
 }
 
@@ -717,10 +717,10 @@
 
 /* 🔹 IMAGE */
 .testimonial-image {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
@@ -740,7 +740,7 @@
 .testimonial-name {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #000;
+  color: #001e6a;
   margin-top: 12px;
 }
 

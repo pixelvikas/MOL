@@ -74,7 +74,7 @@ const servicesData = [
 const reviews = [
   {
     name: "Ashton D Souza",
-    role: "Kinza, Manager",
+    role: "Kinza Foods UAE, Manager",
     review:
       "My Ocean Logistics consistently delivers prompt and brilliant service. Under Miss Amruta Surve's dynamic leadership, the company's future looks bright and boundless. We wish them all the very best in their journey to continued growth!",
     image: testimonial1,

@@ -19,10 +19,9 @@ const Footer = () => {
           <div className="footer-logo">
             <img src={MOLlogo} alt="Thrift Concepts LLP" className="logo" />
             <p className="footer-text">
-              "When you’re moving from your old house to a new location, there
-              are thousands of things to betaken care of. We’ll be your
-              assistants, helping you move all your belongings fast wherever you
-              wish."
+              At My Ocean Logistics, we specialize in connecting communities and
+              businesses through efficient, timely, and secure logistics and
+              transport services across the globe.
             </p>
             <div className="social-icons">
               <a href="#" aria-label="Instagram">
@@ -99,11 +98,8 @@ const Footer = () => {
               </li>
               <li>
                 <CiMail className="footer-contact" />
-                <a
-                  href="mailto:Info@myoceanlogistics.com"
-                  aria-label="Email us"
-                >
-                  support@myoceanlogistics.com
+                <a href="mailto:ceo@namamifamily.com" aria-label="Email us">
+                  ceo@namamifamily.com
                 </a>
               </li>
             </ul>
@@ -113,10 +109,9 @@ const Footer = () => {
         {/* Footer Bottom Section */}
       </footer>
       <div className="footer-bottom">
-        <p>© 2024 Pixel Vikas</p>
+        <p>© 2024 My Ocean Logistics</p>
         <div className="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Services</a>
+          <a href="/privacy-policy">Privacy Policy</a>
         </div>
         <p>All Rights Reserved</p>
       </div>

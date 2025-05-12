@@ -13,6 +13,7 @@ import Services from "./pages/Services/Page";
 import SingleService from "./pages/SingleService/Page";
 import Team from "./pages/Team/Page";
 import Contact from "./pages/Contact/Page";
+import Privacy from "./pages/Privacy";
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -55,6 +56,7 @@ const MainApp = ({ loading, setLoading, progress, setProgress }) => {
         <Route path="/services/:serviceid" element={<SingleService />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/*" element={<Error />} />
       </Routes>
       {/* <WhatsAppButton phoneNumber="+91 91525 99995" size={50} /> */}
