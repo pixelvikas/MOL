@@ -178,19 +178,17 @@ const About = () => {
         className="about-page-section"
         aria-labelledby="about-page-title"
       >
-        {/* Left Section */}
+        {/* Left Content */}
         <div className="about-page-content">
-          <h4 className="about-page-subtitle">ABOUT US</h4>
+          <h4 className="about-page-subtitle">About Us</h4>
           <h1 id="about-page-title" className="about-page-title">
             Reliable and Comprehensive Freight Services
           </h1>
           <p className="about-page-description">
-            At My Ocean Logistics, we specialize in connecting communities and
-            businesses through efficient, timely, and secure logistics and
-            transport services across the globe.
+            My Ocean Logistics bridges communities and businesses through
+            dependable, timely, and secure logistics solutions worldwide.
           </p>
 
-          {/* Services */}
           <div className="about-page-services">
             <article className="about-page-service">
               <IoEarthOutline className="about-page-icon" aria-hidden="true" />
@@ -199,9 +197,8 @@ const About = () => {
                   Worldwide Logistics Service
                 </h2>
                 <p className="about-page-service-text">
-                  We offer global transportation and freight solutions tailored
-                  for international businesses, ensuring safe and timely
-                  delivery across borders.
+                  We provide tailored international freight solutions ensuring
+                  secure, efficient delivery across borders.
                 </p>
               </div>
             </article>
@@ -210,54 +207,42 @@ const About = () => {
               <PiTruckTrailer className="about-page-icon" aria-hidden="true" />
               <div>
                 <h2 className="about-page-service-title">
-                  Local Freight and Transport Solutions
+                  Local Freight & Transport Solutions
                 </h2>
                 <p className="about-page-service-text">
-                  Our local logistics services are designed to support regional
-                  businesses with reliable and cost-effective transport
-                  solutions.
+                  Our regional services deliver cost-effective logistics
+                  tailored for local business needs.
                 </p>
               </div>
             </article>
           </div>
 
-          {/* Learn More Button */}
           <Button
-            text="CONTACT US"
+            text="Contact Us"
             className="primary-btn"
             link="/contact"
-            aria-label="Learn more about our transportation and logistics services"
+            aria-label="Contact My Ocean Logistics for services"
           />
         </div>
 
-        {/* Right Section */}
+        {/* Right Content */}
         <div className="about-page-image-container">
-          <figure>
-            <img
-              src={about1}
-              alt="Logistics worker handling cargo boxes for global transport"
-              className="about-page-image"
-            />
-          </figure>
-
-          {/* CEO Card */}
           <article
             className="about-page-ceo-card"
             aria-labelledby="ceo-card-title"
           >
             <img
               src={Amruta}
-              alt="Amruta Vilas Surve, Founder My Ocean Logistics"
+              alt="Amruta Vilas Surve, Founder of My Ocean Logistics"
               className="about-page-ceo-image"
             />
             <h2 id="ceo-card-title" className="about-page-ceo-name">
               Amruta Vilas Surve
             </h2>
-            <p className="about-page-ceo-title">Founder My Ocean Logistics</p>
+            <p className="about-page-ceo-title">Founder, My Ocean Logistics</p>
             <p className="about-page-ceo-description">
-              At My Ocean Logistics, we are a company focused on shipping supply
-              and demand needs globally. Our mission is to ensure simplifying
-              logistics and freight services to worldwide locations.
+              We focus on simplifying global freight and logistics. Our mission
+              is to streamline your shipping needs with excellence.
             </p>
           </article>
         </div>

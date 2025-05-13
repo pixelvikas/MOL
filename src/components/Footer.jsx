@@ -109,7 +109,7 @@ const Footer = () => {
         {/* Footer Bottom Section */}
       </footer>
       <div className="footer-bottom">
-        <p>© 2024 My Ocean Logistics</p>
+        <p>© 2025 My Ocean Logistics</p>
         <div className="footer-bottom-links">
           <a href="/privacy-policy">Privacy Policy</a>
         </div>
