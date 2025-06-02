@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/mol.png";
+import logo from "../assets/mol.webp";
 
 const LoadingPage = () => {
   return (

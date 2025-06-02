@@ -34,6 +34,9 @@ import testimonial2 from "../../assets/testimonia2.png";
 
 import client1 from "../../assets/testimonial1.jpeg";
 import client2 from "../../assets/testimonia2.png";
+
+import jclogo from "../../assets/jctranslogo.jpeg";
+import jcert from "../../assets/jctranscert.jpeg";
 import { Helmet } from "react-helmet-async";
 
 const About = () => {
@@ -275,6 +278,84 @@ const About = () => {
             link="/contact"
             aria-label="Contact us for transportation and logistics services"
           />
+        </div>
+      </div>
+
+      <div className="jc-modern-container">
+        <div className="jc-modern-header">
+          <div className="jc-logo-wrapper">
+            <img src={jclogo} alt="JCtrans Logo" className="jc-modern-logo" />
+          </div>
+        </div>
+
+        <div className="jc-certificate-container">
+          <div className="jc-certificate-frame">
+            <img
+              src={jcert}
+              alt="JCtrans Certificate"
+              className="jc-modern-cert"
+            />
+          </div>
+        </div>
+
+        <div className="jc-modern-description">
+          <h3 className="jc-description-title">Global Logistics Network</h3>
+          <p className="jc-description-text">
+            Our strategic partnership with the{" "}
+            <span className="jc-highlight">JCtrans Network</span> gives us a
+            robust global presence, connecting us with over{" "}
+            <span className="jc-stat">10,000</span> verified logistics partners
+            in <span className="jc-stat">170+ countries</span>. This extensive
+            network empowers us to deliver seamless, end-to-end logistics
+            solutions across international markets with reliability and speed.
+          </p>
+
+          <div className="jc-features-grid">
+            <div className="jc-feature">
+              <div className="jc-feature-icon">🔑</div>
+              <div className="jc-feature-text">
+                Priority access to trusted global agents
+              </div>
+            </div>
+            <div className="jc-feature">
+              <div className="jc-feature-icon">🛣️</div>
+              <div className="jc-feature-text">Optimized routing options</div>
+            </div>
+            <div className="jc-feature">
+              <div className="jc-feature-icon">💰</div>
+              <div className="jc-feature-text">Competitive freight rates</div>
+            </div>
+            <div className="jc-feature">
+              <div className="jc-feature-icon">🚛</div>
+              <div className="jc-feature-text">
+                Multimodal shipment management
+              </div>
+            </div>
+            <div className="jc-feature">
+              <div className="jc-feature-icon">🛃</div>
+              <div className="jc-feature-text">
+                Efficient customs navigation
+              </div>
+            </div>
+            <div className="jc-feature">
+              <div className="jc-feature-icon">📍</div>
+              <div className="jc-feature-text">Real-time tracking</div>
+            </div>
+          </div>
+
+          <p className="jc-description-text">
+            Through this network alliance, we gain priority access to trusted
+            global agents, optimized routing options, and competitive freight
+            rates. It enhances our capacity to manage multimodal shipments,
+            navigate customs efficiently, and offer real-time tracking.
+          </p>
+
+          <div className="jc-cta">
+            <p className="jc-cta-text">
+              Globally your supply chain is taken care with utmost care through{" "}
+              <strong>MY OCEAN LOGISTICS</strong>
+            </p>
+          </div>
         </div>
       </div>
 
